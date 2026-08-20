@@ -1,0 +1,13 @@
+`00-vision.md`
+
+Conto Product Vision. Vision. Conto es una plataforma que transforma la forma en que las personas descubren, eligen y viven bares, cafés, cervecerías y restaurantes. En lugar de saltar entre Google Maps, Instagram, menús y mensajes, las personas pueden descubrir lugares, reservar mesas, hacer pre-comandas y disfrutar de una experiencia fluida desde el momento en que deciden salir hasta que se van. Nuestra visión es convertirnos en la plataforma por defecto que las personas abren antes de decidir a dónde ir. En cuanto al problema, hoy descubrir un buen lugar para comer o tomar algo está fragmentado. Los usuarios suelen buscar en Google Maps, mirar Instagram para ver si el lugar “parece lindo”, leer reseñas poco consistentes, o buscar fotos o PDFs de menús. Esto también afecta a los comercios, que tienen dificultades para atraer clientes recurrentes, entender a su audiencia y crear experiencias personalizadas.
+
+La solución de Conto unifica todo en una sola experiencia.
+
+Los clientes pueden descubrir lugares según sus preferencias, reservar una mesa, hacer pre-pedidos de comida y bebida, pedir desde su teléfono y ganar recompensas (ContoCoins). Además, reciben recomendaciones personalizadas. Por su parte, los comercios cuentan con herramientas para gestionar menús, administrar reservas, lanzar promociones, entender el comportamiento de sus clientes y construir fidelidad.
+
+El público objetivo incluye personas que disfrutan salir y quieren una experiencia más rápida, más simple y más personalizada. Esto incluye amigos, parejas, familias, turistas, amantes de la comida y entusiastas del café. En el lado de los negocios, nos enfocamos en bares, restaurantes, cervecerías y food trucks de tamaño pequeño a mediano. Cada decisión en Conto debe ser simple antes que compleja, rápida antes que llena de funciones, personalizada sin ser invasiva, mobile first, amigable, con el usuario siempre en control y, ante todo, explorar primero y registrarse después. El objetivo del MVP es validar que las personas quieran descubrir lugares con Conto,
+
+reservar mesas y experimentar algo mejor que las alternativas tradicionales.
+
+A largo plazo, Conto busca convertirse en el sistema operativo de referencia para salir, ayudando a descubrir lugares que realmente les gusten a los usuarios, y brindando a los comercios herramientas modernas para crear experiencias memorables y relaciones duraderas con sus clientes. Luego, vamos puliendo el texto, pero este borrador sirve perfecto para empezar. Después, pasamos al01-product-spec.md para definir funcionalidades.
