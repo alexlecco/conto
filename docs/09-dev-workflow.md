@@ -44,7 +44,7 @@ The expected documentation structure is:
 docs/
 ├── 00-vision.md
 ├── 01-product-spec.md
-├── 02-architecture-spec.md
+├── 02-user-flows.md
 ├── 03-data-model.md
 ├── 04-api-spec.md
 ├── 05-ui-ux-spec.md
@@ -124,7 +124,7 @@ For reservations:
 ```text
 00-vision.md
 01-product-spec.md
-02-architecture-spec.md
+02-user-flows.md
 03-data-model.md
 04-api-spec.md
 06-security-spec.md
@@ -142,7 +142,7 @@ For AI work:
 
 ```text
 01-product-spec.md
-02-architecture-spec.md
+02-user-flows.md
 04-api-spec.md
 06-security-spec.md
 08-ai-spec.md
