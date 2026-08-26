@@ -659,20 +659,3 @@ Never lose sight of the core question:
 > Does this help the user discover, choose, visit, enjoy, or return to a place?
 
 ```
-
-### Mi recomendación final
-
-Después de hacer esas correcciones, el flujo con Cursor sería:
-
-**1.** `AGENTS.md` en la raíz.  
-**2.** `docs/00...09`.  
-**3.** `docs/10-master-prompt.md`.  
-**4.** Abrís el repositorio en Cursor.  
-**5.** Le pegás como primera instrucción:
-
-> **“Read AGENTS.md and all documents in docs/. Do not write application code yet. First audit the repository against the specifications, report inconsistencies and missing prerequisites, then propose the first implementation slice.”**
-
-Eso aprovecha justamente el soporte nativo de Cursor para `AGENTS.md`.
-
-Y una última cosa: **yo no fijaría todavía un nombre de modelo gratuito en el Master Prompt**. OpenCode está mostrando actualmente varios modelos gratuitos, pero los marca como disponibilidad temporal; es mejor hacer que el agente consulte el catálogo actual y usar una elección/fallback documentados en `08-ai-spec.md`.
-```
