@@ -94,32 +94,32 @@ The MVP has two primary user roles.
 
 A customer uses Conto to:
 
-* Discover places.
-* Explore recommendations.
-* Filter places.
-* View venue information.
-* Save interesting places.
-* Make reservations.
-* View menus.
-* Order through QR when supported.
-* Potentially pre-order items.
-* Earn ContoCoins.
-* View rewards.
-* Manage their preferences.
+- Discover places.
+- Explore recommendations.
+- Filter places.
+- View venue information.
+- Save interesting places.
+- Make reservations.
+- View menus.
+- Order through QR when supported.
+- Potentially pre-order items.
+- Earn ContoCoins.
+- View rewards.
+- Manage their preferences.
 
 ## 4.2 Business
 
 A business uses Conto to:
 
-* Create and manage its venue profile.
-* Manage venue information.
-* Manage menus.
-* Manage availability.
-* Manage reservations.
-* Receive orders.
-* Create promotions.
-* View basic customer and business insights.
-* Participate in the Conto rewards ecosystem.
+- Create and manage its venue profile.
+- Manage venue information.
+- Manage menus.
+- Manage availability.
+- Manage reservations.
+- Receive orders.
+- Create promotions.
+- View basic customer and business insights.
+- Participate in the Conto rewards ecosystem.
 
 Business functionality may initially be implemented as a lightweight dashboard.
 
@@ -133,10 +133,10 @@ Users should immediately understand what Conto does.
 
 The first experience should communicate:
 
-* Discover places.
-* Find something that matches your mood.
-* Explore nearby or relevant venues.
-* Continue without creating an account.
+- Discover places.
+- Find something that matches your mood.
+- Explore nearby or relevant venues.
+- Continue without creating an account.
 
 Primary action:
 
@@ -158,12 +158,12 @@ The purpose is to improve recommendations, not to create a rigid personality tes
 
 The onboarding should be:
 
-* Short.
-* Friendly.
-* Optional.
-* Skippable.
-* Non-invasive.
-* Easy to understand.
+- Short.
+- Friendly.
+- Optional.
+- Skippable.
+- Non-invasive.
+- Easy to understand.
 
 Target: approximately 3–4 questions.
 
@@ -173,33 +173,33 @@ Possible dimensions include:
 
 Examples:
 
-* Calm
-* Balanced
-* Energetic
+- Calm
+- Balanced
+- Energetic
 
 ### Social preference
 
 Examples:
 
-* Quiet / intimate
-* Small groups
-* Social / lively
+- Quiet / intimate
+- Small groups
+- Social / lively
 
 ### Planning preference
 
 Examples:
 
-* I like to plan ahead.
-* A little planning is good.
-* I prefer to decide spontaneously.
+- I like to plan ahead.
+- A little planning is good.
+- I prefer to decide spontaneously.
 
 ### Exploration preference
 
 Examples:
 
-* I like familiar places.
-* I enjoy discovering new places.
-* Show me something unexpected.
+- I like familiar places.
+- I enjoy discovering new places.
+- Show me something unexpected.
 
 The exact questions can evolve during UX validation.
 
@@ -221,17 +221,17 @@ It should prioritize relevant places instead of displaying an overwhelming direc
 
 Potential sections:
 
-* Recommended for you.
-* Near you.
-* Popular now.
-* New places.
-* Quiet places.
-* Good for groups.
-* Date-friendly.
-* Food-focused.
-* Coffee / café.
-* Drinks / nightlife.
-* Explore everything.
+- Recommended for you.
+- Near you.
+- Popular now.
+- New places.
+- Quiet places.
+- Good for groups.
+- Date-friendly.
+- Food-focused.
+- Coffee / café.
+- Drinks / nightlife.
+- Explore everything.
 
 The exact sections should be dynamically configurable.
 
@@ -245,16 +245,16 @@ A venue card should communicate the most important information quickly.
 
 Possible information:
 
-* Venue name.
-* Main image.
-* Category.
-* Approximate location.
-* Price level.
-* Rating or quality indicator where available.
-* Relevant tags.
-* Current availability where available.
-* Distance.
-* Personalized reason.
+- Venue name.
+- Main image.
+- Category.
+- Approximate location.
+- Price level.
+- Rating or quality indicator where available.
+- Relevant tags.
+- Current availability where available.
+- Distance.
+- Personalized reason.
 
 Examples of personalized reasons:
 
@@ -274,22 +274,22 @@ Users should be able to search for places.
 
 Search may support:
 
-* Venue name.
-* Category.
-* Food type.
-* Drink type.
-* Tags.
-* Neighborhood.
-* General intent.
+- Venue name.
+- Category.
+- Food type.
+- Drink type.
+- Tags.
+- Neighborhood.
+- General intent.
 
 Examples:
 
-* "pizza"
-* "coffee"
-* "craft beer"
-* "quiet"
-* "date"
-* "live music"
+- "pizza"
+- "coffee"
+- "craft beer"
+- "quiet"
+- "date"
+- "live music"
 
 Search should return useful results without requiring highly specific queries.
 
@@ -301,16 +301,16 @@ Users should be able to refine discovery.
 
 Initial filters may include:
 
-* Category.
-* Price.
-* Distance.
-* Atmosphere.
-* Food/drink type.
-* Availability.
-* Open now.
-* Suitable for groups.
-* Quiet / lively.
-* Indoor / outdoor where available.
+- Category.
+- Price.
+- Distance.
+- Atmosphere.
+- Food/drink type.
+- Availability.
+- Open now.
+- Suitable for groups.
+- Quiet / lively.
+- Indoor / outdoor where available.
 
 Filters should remain lightweight.
 
@@ -328,22 +328,22 @@ Possible sections:
 
 ### Header
 
-* Venue name.
-* Main image.
-* Category.
-* Location.
-* Basic rating / quality information.
+- Venue name.
+- Main image.
+- Category.
+- Location.
+- Basic rating / quality information.
 
 ### Atmosphere
 
 Examples:
 
-* Quiet.
-* Casual.
-* Social.
-* Lively.
-* Romantic.
-* Family-friendly.
+- Quiet.
+- Casual.
+- Social.
+- Lively.
+- Romantic.
+- Family-friendly.
 
 ### Menu
 
@@ -351,22 +351,22 @@ Users should be able to view the current menu when provided by the business.
 
 ### Information
 
-* Address.
-* Opening hours.
-* Contact information.
-* Available services.
-* Amenities.
+- Address.
+- Opening hours.
+- Contact information.
+- Available services.
+- Amenities.
 
 ### Actions
 
 Primary actions may include:
 
-* Reserve.
-* Get directions.
-* View menu.
-* Order when available.
-* Save.
-* Share.
+- Reserve.
+- Get directions.
+- View menu.
+- Order when available.
+- Save.
+- Share.
 
 The most important action should be visually prominent.
 
@@ -389,11 +389,11 @@ A basic reservation flow:
 
 The system should clearly distinguish:
 
-* Available.
-* Unavailable.
-* Pending.
-* Confirmed.
-* Cancelled.
+- Available.
+- Unavailable.
+- Pending.
+- Confirmed.
+- Cancelled.
 
 The business should be able to manage reservations from its dashboard.
 
@@ -405,10 +405,10 @@ Participating businesses may use QR codes to connect the physical experience wit
 
 A QR code can represent:
 
-* Venue.
-* Table.
-* Menu.
-* Ordering session.
+- Venue.
+- Table.
+- Menu.
+- Ordering session.
 
 A customer scans the QR code and enters the relevant venue experience.
 
@@ -424,23 +424,23 @@ Businesses should be able to create and maintain digital menus.
 
 Menu structure should support:
 
-* Categories.
-* Items.
-* Name.
-* Description.
-* Price.
-* Image.
-* Availability.
-* Optional modifiers.
+- Categories.
+- Items.
+- Name.
+- Description.
+- Price.
+- Image.
+- Availability.
+- Optional modifiers.
 
 Example categories:
 
-* Starters.
-* Main dishes.
-* Desserts.
-* Drinks.
-* Cocktails.
-* Coffee.
+- Starters.
+- Main dishes.
+- Desserts.
+- Drinks.
+- Cocktails.
+- Coffee.
 
 Businesses should be able to mark an item as temporarily unavailable.
 
@@ -462,12 +462,12 @@ Basic flow:
 
 Possible statuses:
 
-* Received.
-* Accepted.
-* Preparing.
-* Ready.
-* Delivered / served.
-* Cancelled.
+- Received.
+- Accepted.
+- Preparing.
+- Ready.
+- Delivered / served.
+- Cancelled.
 
 The MVP should keep ordering architecture modular because payment integration may be introduced at a later stage.
 
@@ -495,11 +495,11 @@ Users can earn ContoCoins through eligible activities.
 
 Potential earning activities:
 
-* Visiting participating venues.
-* Completing eligible orders.
-* Participating in promotions.
-* Returning to participating venues.
-* Completing selected Conto activities.
+- Visiting participating venues.
+- Completing eligible orders.
+- Participating in promotions.
+- Returning to participating venues.
+- Completing selected Conto activities.
 
 Coins should have a transparent value and clear rules.
 
@@ -515,18 +515,18 @@ Users should be able to see available rewards.
 
 A reward may include:
 
-* Discount.
-* Free item.
-* Promotional offer.
-* Venue-specific benefit.
-* Conto-wide benefit.
+- Discount.
+- Free item.
+- Promotional offer.
+- Venue-specific benefit.
+- Conto-wide benefit.
 
 Each reward should clearly show:
 
-* What it provides.
-* Where it can be used.
-* Requirements.
-* Expiration date, if applicable.
+- What it provides.
+- Where it can be used.
+- Requirements.
+- Expiration date, if applicable.
 
 ---
 
@@ -534,17 +534,17 @@ Each reward should clearly show:
 
 Recommendations should eventually use signals such as:
 
-* User-selected preferences.
-* Previous interactions.
-* Saved venues.
-* Viewed venues.
-* Searches.
-* Categories explored.
-* Visits.
-* Orders.
-* Time of day.
-* Location.
-* Venue characteristics.
+- User-selected preferences.
+- Previous interactions.
+- Saved venues.
+- Viewed venues.
+- Searches.
+- Categories explored.
+- Visits.
+- Orders.
+- Time of day.
+- Location.
+- Venue characteristics.
 
 For the MVP, personalization should remain simple.
 
@@ -560,13 +560,13 @@ Businesses need a simple management interface.
 
 Initial dashboard sections:
 
-* Overview.
-* Venue profile.
-* Menu.
-* Reservations.
-* Orders.
-* Promotions.
-* Basic analytics.
+- Overview.
+- Venue profile.
+- Menu.
+- Reservations.
+- Orders.
+- Promotions.
+- Basic analytics.
 
 The dashboard should prioritize operational tasks over complex analytics.
 
@@ -576,16 +576,16 @@ The dashboard should prioritize operational tasks over complex analytics.
 
 Businesses should be able to manage:
 
-* Name.
-* Description.
-* Images.
-* Address.
-* Opening hours.
-* Categories.
-* Atmosphere tags.
-* Contact information.
-* Services.
-* Menu.
+- Name.
+- Description.
+- Images.
+- Address.
+- Opening hours.
+- Categories.
+- Atmosphere tags.
+- Contact information.
+- Services.
+- Menu.
 
 Changes should be reflected in the customer experience without requiring developer intervention.
 
@@ -597,13 +597,13 @@ Businesses should eventually be able to create promotions.
 
 A promotion may include:
 
-* Title.
-* Description.
-* Valid dates.
-* Valid hours.
-* Eligible users.
-* Reward.
-* Usage limitations.
+- Title.
+- Description.
+- Valid dates.
+- Valid hours.
+- Eligible users.
+- Reward.
+- Usage limitations.
 
 Promotions should integrate with discovery and rewards.
 
@@ -615,14 +615,14 @@ The MVP should provide businesses with basic metrics.
 
 Potential metrics:
 
-* Venue views.
-* Saves.
-* Reservation requests.
-* Confirmed reservations.
-* QR scans.
-* Orders.
-* Repeat customers.
-* Promotion usage.
+- Venue views.
+- Saves.
+- Reservation requests.
+- Confirmed reservations.
+- QR scans.
+- Orders.
+- Repeat customers.
+- Promotion usage.
 
 Analytics should be simple and actionable.
 
@@ -632,15 +632,15 @@ Analytics should be simple and actionable.
 
 Account functionality should include:
 
-* Name.
-* Profile information.
-* Preferences.
-* Saved venues.
-* Reservations.
-* Orders.
-* Rewards.
-* ContoCoins.
-* Basic settings.
+- Name.
+- Profile information.
+- Preferences.
+- Saved venues.
+- Reservations.
+- Orders.
+- Rewards.
+- ContoCoins.
+- Basic settings.
 
 Users should be able to modify their preferences.
 
@@ -660,12 +660,12 @@ The saved list should be easy to access.
 
 Notifications may eventually include:
 
-* Reservation confirmation.
-* Reservation reminders.
-* Order updates.
-* Reward availability.
-* Promotion notifications.
-* Relevant recommendations.
+- Reservation confirmation.
+- Reservation reminders.
+- Order updates.
+- Reward availability.
+- Promotion notifications.
+- Relevant recommendations.
 
 The MVP should avoid excessive notifications.
 
@@ -679,11 +679,11 @@ The customer application should use a simple navigation structure.
 
 A possible MVP structure:
 
-* Home
-* Explore
-* Saved
-* Reservations / Activity
-* Profile
+- Home
+- Explore
+- Saved
+- Reservations / Activity
+- Profile
 
 The exact navigation may change during UX implementation.
 
@@ -695,9 +695,9 @@ Authentication should support a low-friction experience.
 
 Potential methods:
 
-* Email.
-* Passwordless authentication.
-* Google or other OAuth provider, if appropriate.
+- Email.
+- Passwordless authentication.
+- Google or other OAuth provider, if appropriate.
 
 Authentication should not be required for basic discovery.
 
@@ -727,12 +727,12 @@ Every asynchronous experience should have an appropriate loading state.
 
 Examples:
 
-* Venue discovery.
-* Search.
-* Reservation availability.
-* Menu loading.
-* Orders.
-* Rewards.
+- Venue discovery.
+- Search.
+- Reservation availability.
+- Menu loading.
+- Orders.
+- Rewards.
 
 Avoid blank screens.
 
@@ -758,15 +758,15 @@ Empty states should provide a useful next action.
 
 The MVP should be:
 
-* Mobile-first.
-* Responsive.
-* Fast.
-* Accessible.
-* Secure.
-* Maintainable.
-* Modular.
-* Easy to iterate.
-* Suitable for low-cost deployment.
+- Mobile-first.
+- Responsive.
+- Fast.
+- Accessible.
+- Secure.
+- Maintainable.
+- Modular.
+- Easy to iterate.
+- Suitable for low-cost deployment.
 
 The architecture should avoid unnecessary infrastructure complexity.
 
@@ -776,12 +776,12 @@ The architecture should avoid unnecessary infrastructure complexity.
 
 Initial priorities:
 
-* Fast initial load.
-* Optimized images.
-* Minimal JavaScript where possible.
-* Efficient API requests.
-* Reasonable caching.
-* Responsive interactions.
+- Fast initial load.
+- Optimized images.
+- Minimal JavaScript where possible.
+- Efficient API requests.
+- Reasonable caching.
+- Responsive interactions.
 
 The product should feel fast on average mobile connections.
 
@@ -791,12 +791,12 @@ The product should feel fast on average mobile connections.
 
 The application must:
 
-* Protect authenticated user data.
-* Validate server-side operations.
-* Avoid exposing secrets in client code.
-* Validate business permissions.
-* Prevent users from accessing another business's private data.
-* Protect reservation and order operations against unauthorized modification.
+- Protect authenticated user data.
+- Validate server-side operations.
+- Avoid exposing secrets in client code.
+- Validate business permissions.
+- Prevent users from accessing another business's private data.
+- Protect reservation and order operations against unauthorized modification.
 
 Security requirements should be expanded before production deployment.
 
@@ -820,44 +820,44 @@ The product should not require unnecessary personal information.
 
 ### Must Have
 
-* Customer discovery.
-* Venue profiles.
-* Search.
-* Basic filters.
-* Optional personalization onboarding.
-* Recommendations.
-* User accounts.
-* Saved venues.
-* Reservations.
-* Digital menus.
-* Basic QR experience.
-* Basic business dashboard.
-* Basic ContoCoins/rewards foundation.
+- Customer discovery.
+- Venue profiles.
+- Search.
+- Basic filters.
+- Optional personalization onboarding.
+- Recommendations.
+- User accounts.
+- Saved venues.
+- Reservations.
+- Digital menus.
+- Basic QR experience.
+- Basic business dashboard.
+- Basic ContoCoins/rewards foundation.
 
 ### Should Have
 
-* QR ordering.
-* Promotions.
-* Basic analytics.
-* Reservation reminders.
-* Basic personalization based on behavior.
+- QR ordering.
+- Promotions.
+- Basic analytics.
+- Reservation reminders.
+- Basic personalization based on behavior.
 
 ### Could Have
 
-* Pre-ordering.
-* Advanced recommendation engine.
-* Advanced analytics.
-* Social features.
-* Advanced loyalty mechanics.
-* Payments.
+- Pre-ordering.
+- Advanced recommendation engine.
+- Advanced analytics.
+- Social features.
+- Advanced loyalty mechanics.
+- Payments.
 
 ### Not Required for Initial MVP
 
-* Complex social network.
-* Advanced AI recommendation system.
-* Full payment infrastructure.
-* Highly complex gamification.
-* Native iOS and Android applications if a PWA can validate the concept first.
+- Complex social network.
+- Advanced AI recommendation system.
+- Full payment infrastructure.
+- Highly complex gamification.
+- Native iOS and Android applications if a PWA can validate the concept first.
 
 ---
 
@@ -873,17 +873,17 @@ and, where supported:
 
 Important metrics to evaluate include:
 
-* Discovery sessions.
-* Venue detail views.
-* Saved venues.
-* Reservation conversion.
-* Reservation completion.
-* Repeat usage.
-* QR scans.
-* Orders.
-* Reward engagement.
-* Business adoption.
-* User retention.
+- Discovery sessions.
+- Venue detail views.
+- Saved venues.
+- Reservation conversion.
+- Reservation completion.
+- Repeat usage.
+- QR scans.
+- Orders.
+- Reward engagement.
+- Business adoption.
+- User retention.
 
 Exact numerical targets should be defined after the initial product assumptions are validated.
 
@@ -893,16 +893,16 @@ Exact numerical targets should be defined after the initial product assumptions 
 
 The MVP architecture should allow Conto to evolve toward:
 
-* Advanced personalization.
-* AI-assisted discovery.
-* Smarter recommendations.
-* Payments.
-* Advanced loyalty.
-* Social discovery.
-* Event discovery.
-* Personalized experiences for businesses.
-* Deeper business analytics.
-* Multi-city expansion.
+- Advanced personalization.
+- AI-assisted discovery.
+- Smarter recommendations.
+- Payments.
+- Advanced loyalty.
+- Social discovery.
+- Event discovery.
+- Personalized experiences for businesses.
+- Deeper business analytics.
+- Multi-city expansion.
 
 However, these capabilities should not complicate the initial MVP unnecessarily.
 
@@ -932,4 +932,4 @@ The Product Specification should remain focused on **what Conto does and why**.
 
 Technical implementation details should be documented separately in the technology stack specification and ADRs.
 
-The Master Prompt for Open Code will instruct the coding agent to treat these documents as the project's source of truth.
+The Master Prompt for OpenCode will instruct the coding agent to treat these documents as the project's source of truth.

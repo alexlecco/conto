@@ -13,16 +13,16 @@
 
 All Conto flows should follow these principles:
 
-* Keep the number of steps as low as reasonably possible.
-* Allow users to explore before requiring authentication.
-* Make the next action obvious.
-* Avoid unnecessary forms.
-* Provide clear feedback after important actions.
-* Never trap users inside a flow.
-* Allow users to go back or cancel whenever appropriate.
-* Preserve user progress when possible.
-* Keep the experience mobile-first.
-* Personalization should assist the user, never restrict them.
+- Keep the number of steps as low as reasonably possible.
+- Allow users to explore before requiring authentication.
+- Make the next action obvious.
+- Avoid unnecessary forms.
+- Provide clear feedback after important actions.
+- Never trap users inside a flow.
+- Allow users to go back or cancel whenever appropriate.
+- Preserve user progress when possible.
+- Keep the experience mobile-first.
+- Personalization should assist the user, never restrict them.
 
 The primary product loop is:
 
@@ -69,10 +69,10 @@ Allow a new user to understand and use Conto without immediately creating an acc
 
 User sees:
 
-* Conto identity.
-* Short explanation.
-* Primary action: `Explore`.
-* Secondary action: `Sign in`.
+- Conto identity.
+- Short explanation.
+- Primary action: `Explore`.
+- Secondary action: `Sign in`.
 
 ### Step 2 — Explore
 
@@ -88,8 +88,8 @@ Conto may offer:
 
 Actions:
 
-* `Let's do it`
-* `Skip`
+- `Let's do it`
+- `Skip`
 
 ### Step 4 — Discovery
 
@@ -119,10 +119,10 @@ The flow should feel like a conversation rather than a formal personality test.
 
 Options:
 
-* Calm
-* Balanced
-* Lively
-* Surprise me
+- Calm
+- Balanced
+- Lively
+- Surprise me
 
 ### Question 2 — Social Style
 
@@ -130,11 +130,11 @@ Options:
 
 Options:
 
-* Something quiet
-* A place to chat
-* Something social
-* Something lively
-* Surprise me
+- Something quiet
+- A place to chat
+- Something social
+- Something lively
+- Surprise me
 
 ### Question 3 — Planning
 
@@ -142,9 +142,9 @@ Options:
 
 Options:
 
-* I like to plan
-* I have a rough idea
-* I decide on the spot
+- I like to plan
+- I have a rough idea
+- I decide on the spot
 
 ### Question 4 — Exploration
 
@@ -152,9 +152,9 @@ Options:
 
 Options:
 
-* My usual favorites
-* A mix of familiar and new
-* Show me something unexpected
+- My usual favorites
+- A mix of familiar and new
+- Show me something unexpected
 
 The exact wording is subject to UX iteration.
 
@@ -206,15 +206,15 @@ Help the user find a relevant place quickly.
 
 A venue card may display:
 
-* Name.
-* Image.
-* Category.
-* Atmosphere.
-* Price level.
-* Distance.
-* Relevant tags.
-* Availability.
-* Personalized explanation.
+- Name.
+- Image.
+- Category.
+- Atmosphere.
+- Price level.
+- Distance.
+- Relevant tags.
+- Availability.
+- Personalized explanation.
 
 Example:
 
@@ -250,11 +250,11 @@ Conto returns relevant venues.
 
 User may then:
 
-* Open venue.
-* Save venue.
-* Reserve.
-* Continue searching.
-* Apply filters.
+- Open venue.
+- Save venue.
+- Reserve.
+- Continue searching.
+- Apply filters.
 
 ---
 
@@ -266,15 +266,15 @@ User may then:
 
 Filters may include:
 
-* Category.
-* Price.
-* Distance.
-* Atmosphere.
-* Open now.
-* Availability.
-* Food/drink type.
-* Quiet / lively.
-* Suitable for groups.
+- Category.
+- Price.
+- Distance.
+- Atmosphere.
+- Open now.
+- Availability.
+- Food/drink type.
+- Quiet / lively.
+- Suitable for groups.
 
 Filters should be removable individually.
 
@@ -298,23 +298,23 @@ Give the user enough information to make a decision.
 
 The venue page should provide:
 
-* Photos.
-* Description.
-* Atmosphere.
-* Menu.
-* Location.
-* Hours.
-* Relevant tags.
-* Availability.
-* Actions.
+- Photos.
+- Description.
+- Atmosphere.
+- Menu.
+- Location.
+- Hours.
+- Relevant tags.
+- Availability.
+- Actions.
 
 Primary actions may include:
 
-* `Reserve`
-* `View menu`
-* `Order`
-* `Save`
-* `Get directions`
+- `Reserve`
+- `View menu`
+- `Order`
+- `Save`
+- `Get directions`
 
 The exact primary action depends on the venue context.
 
@@ -386,11 +386,11 @@ User selects number of people.
 
 User sees:
 
-* Venue.
-* Date.
-* Time.
-* Party size.
-* Relevant reservation conditions.
+- Venue.
+- Date.
+- Time.
+- Party size.
+- Relevant reservation conditions.
 
 ### Step 6 — Confirm
 
@@ -442,12 +442,12 @@ Where notifications are enabled:
 
 A reminder may contain:
 
-* Venue.
-* Date.
-* Time.
-* Party size.
-* Address.
-* Directions.
+- Venue.
+- Date.
+- Time.
+- Party size.
+- Address.
+- Directions.
 
 Notifications should remain concise.
 
@@ -465,10 +465,10 @@ Connect the physical venue with the digital Conto experience.
 
 The QR may identify:
 
-* Venue.
-* Table.
-* Menu.
-* Ordering session.
+- Venue.
+- Table.
+- Menu.
+- Ordering session.
 
 After scanning, Conto should immediately display the relevant venue experience.
 
@@ -496,12 +496,12 @@ This is particularly important for reducing friction inside venues.
 
 The user can:
 
-* Browse categories.
-* Open items.
-* View descriptions.
-* View prices.
-* View images.
-* Select modifiers where supported.
+- Browse categories.
+- Open items.
+- View descriptions.
+- View prices.
+- View images.
+- Select modifiers where supported.
 
 ---
 
@@ -513,9 +513,9 @@ The user can:
 
 The user selects:
 
-* Quantity.
-* Modifiers.
-* Optional notes where supported.
+- Quantity.
+- Modifiers.
+- Optional notes where supported.
 
 The item is added to the cart.
 
@@ -531,10 +531,10 @@ The user can continue browsing.
 
 The user reviews:
 
-* Items.
-* Quantities.
-* Modifiers.
-* Total.
+- Items.
+- Quantities.
+- Modifiers.
+- Total.
 
 Then:
 
@@ -602,11 +602,11 @@ The system should clearly explain why coins were awarded.
 
 A reward should clearly show:
 
-* Benefit.
-* Venue.
-* Requirements.
-* Expiration.
-* Redemption instructions.
+- Benefit.
+- Venue.
+- Requirements.
+- Expiration.
+- Redemption instructions.
 
 ---
 
@@ -636,9 +636,9 @@ Authentication should happen only when necessary.
 
 Potential authentication methods:
 
-* Email.
-* Passwordless.
-* OAuth.
+- Email.
+- Passwordless.
+- OAuth.
 
 The user should return to the exact action they were attempting whenever possible.
 
@@ -662,14 +662,14 @@ After successful authentication, Conto should restore the user's previous contex
 
 Possible sections:
 
-* Personal information.
-* Preferences.
-* Saved places.
-* Reservations.
-* Orders.
-* ContoCoins.
-* Rewards.
-* Settings.
+- Personal information.
+- Preferences.
+- Saved places.
+- Reservations.
+- Orders.
+- ContoCoins.
+- Rewards.
+- Settings.
 
 ---
 
@@ -691,9 +691,9 @@ Conto may eventually allow users to provide lightweight feedback.
 
 Examples:
 
-* "More like this."
-* "Less like this."
-* "Not interested."
+- "More like this."
+- "Less like this."
+- "Not interested."
 
 The system can use this feedback to improve recommendations.
 
@@ -713,13 +713,13 @@ Allow a business to become part of Conto.
 
 Initial information may include:
 
-* Business name.
-* Category.
-* Address.
-* Contact information.
-* Opening hours.
-* Description.
-* Images.
+- Business name.
+- Category.
+- Address.
+- Contact information.
+- Opening hours.
+- Description.
+- Images.
 
 Verification requirements may evolve depending on the business model.
 
@@ -733,13 +733,13 @@ Verification requirements may evolve depending on the business model.
 
 Main areas:
 
-* Overview.
-* Venue.
-* Menu.
-* Reservations.
-* Orders.
-* Promotions.
-* Analytics.
+- Overview.
+- Venue.
+- Menu.
+- Reservations.
+- Orders.
+- Promotions.
+- Analytics.
 
 The dashboard should prioritize operational tasks.
 
@@ -753,12 +753,12 @@ The dashboard should prioritize operational tasks.
 
 Businesses can update:
 
-* Description.
-* Images.
-* Hours.
-* Categories.
-* Atmosphere.
-* Services.
+- Description.
+- Images.
+- Hours.
+- Categories.
+- Atmosphere.
+- Services.
 
 Changes should be validated before publishing.
 
@@ -772,13 +772,13 @@ Changes should be validated before publishing.
 
 Business users can:
 
-* Create categories.
-* Add items.
-* Edit items.
-* Change prices.
-* Upload images.
-* Mark items unavailable.
-* Reorder items.
+- Create categories.
+- Add items.
+- Edit items.
+- Change prices.
+- Upload images.
+- Mark items unavailable.
+- Reorder items.
 
 ---
 
@@ -790,10 +790,10 @@ Business users can:
 
 Possible actions:
 
-* Confirm.
-* Decline.
-* Cancel.
-* Mark completed.
+- Confirm.
+- Decline.
+- Cancel.
+- Mark completed.
 
 The business should see relevant reservation information without unnecessary complexity.
 
@@ -823,12 +823,12 @@ The customer should receive the corresponding status update.
 
 Promotion fields may include:
 
-* Name.
-* Description.
-* Reward.
-* Valid period.
-* Conditions.
-* Usage limits.
+- Name.
+- Description.
+- Reward.
+- Valid period.
+- Conditions.
+- Usage limits.
 
 Published promotions can appear in relevant discovery surfaces.
 
@@ -842,13 +842,13 @@ Published promotions can appear in relevant discovery surfaces.
 
 Initial metrics:
 
-* Views.
-* Saves.
-* Reservations.
-* Orders.
-* QR scans.
-* Repeat customers.
-* Promotion usage.
+- Views.
+- Saves.
+- Reservations.
+- Orders.
+- QR scans.
+- Repeat customers.
+- Promotion usage.
 
 Analytics should emphasize actionable information.
 
@@ -1027,39 +1027,39 @@ Implementation priority should be:
 
 ### Priority 1 — Core Discovery
 
-* Landing.
-* Explore.
-* Search.
-* Filters.
-* Venue detail.
-* Save.
+- Landing.
+- Explore.
+- Search.
+- Filters.
+- Venue detail.
+- Save.
 
 ### Priority 2 — Reservations
 
-* Availability.
-* Reservation creation.
-* Reservation management.
-* Confirmation.
+- Availability.
+- Reservation creation.
+- Reservation management.
+- Confirmation.
 
 ### Priority 3 — Business Foundation
 
-* Business onboarding.
-* Venue management.
-* Menu management.
-* Reservation management.
+- Business onboarding.
+- Venue management.
+- Menu management.
+- Reservation management.
 
 ### Priority 4 — Physical Venue Experience
 
-* QR.
-* Digital menu.
-* Ordering.
+- QR.
+- Digital menu.
+- Ordering.
 
 ### Priority 5 — Engagement
 
-* ContoCoins.
-* Rewards.
-* Promotions.
-* Basic personalization based on behavior.
+- ContoCoins.
+- Rewards.
+- Promotions.
+- Basic personalization based on behavior.
 
 ---
 
@@ -1067,16 +1067,16 @@ Implementation priority should be:
 
 The architecture should eventually support:
 
-* Advanced recommendations.
-* AI-assisted discovery.
-* Social discovery.
-* Events.
-* Group planning.
-* Shared reservations.
-* Payments.
-* Advanced loyalty.
-* Personalized offers.
-* Multi-venue experiences.
+- Advanced recommendations.
+- AI-assisted discovery.
+- Social discovery.
+- Events.
+- Group planning.
+- Shared reservations.
+- Payments.
+- Advanced loyalty.
+- Personalized offers.
+- Multi-venue experiences.
 
 These are intentionally outside the core MVP flow.
 

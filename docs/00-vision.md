@@ -27,6 +27,7 @@ On the business side, we focus on small to medium-sized bars, restaurants, brewe
 ## Guiding Principles
 
 Every decision at Conto must be:
+
 - Simple rather than complex
 - Fast rather than feature-heavy
 - Personalized without being invasive

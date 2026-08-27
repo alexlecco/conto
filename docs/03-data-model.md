@@ -13,14 +13,14 @@
 
 The Conto data model should be:
 
-* Simple.
-* Modular.
-* Extensible.
-* Secure.
-* Easy to query.
-* Suitable for a mobile-first product.
-* Compatible with the initial MVP architecture.
-* Flexible enough to support future personalization and AI.
+- Simple.
+- Modular.
+- Extensible.
+- Secure.
+- Easy to query.
+- Suitable for a mobile-first product.
+- Compatible with the initial MVP architecture.
+- Flexible enough to support future personalization and AI.
 
 The MVP should avoid unnecessary normalization or complexity.
 
@@ -68,23 +68,23 @@ Represents a Conto customer.
 
 ## Fields
 
-* `id`
-* `email`
-* `displayName`
-* `avatarUrl`
-* `phoneNumber` — optional
-* `createdAt`
-* `updatedAt`
-* `lastActiveAt`
-* `status`
+- `id`
+- `email`
+- `displayName`
+- `avatarUrl`
+- `phoneNumber` — optional
+- `createdAt`
+- `updatedAt`
+- `lastActiveAt`
+- `status`
 
 ## Status
 
 Possible values:
 
-* `active`
-* `suspended`
-* `deleted`
+- `active`
+- `suspended`
+- `deleted`
 
 ---
 
@@ -94,16 +94,16 @@ Stores lightweight personalization information.
 
 ## Fields
 
-* `id`
-* `userId`
-* `energyPreference`
-* `socialPreference`
-* `planningPreference`
-* `explorationPreference`
-* `preferredCategories`
-* `preferredAtmospheres`
-* `preferredPriceLevels`
-* `updatedAt`
+- `id`
+- `userId`
+- `energyPreference`
+- `socialPreference`
+- `planningPreference`
+- `explorationPreference`
+- `preferredCategories`
+- `preferredAtmospheres`
+- `preferredPriceLevels`
+- `updatedAt`
 
 All preference fields should be optional.
 
@@ -117,25 +117,25 @@ Represents the business entity that owns or manages one or more venues.
 
 ## Fields
 
-* `id`
-* `name`
-* `legalName` — optional
-* `description`
-* `email`
-* `phone`
-* `website` — optional
-* `status`
-* `createdAt`
-* `updatedAt`
+- `id`
+- `name`
+- `legalName` — optional
+- `description`
+- `email`
+- `phone`
+- `website` — optional
+- `status`
+- `createdAt`
+- `updatedAt`
 
 ## Status
 
 Possible values:
 
-* `pending`
-* `active`
-* `suspended`
-* `inactive`
+- `pending`
+- `active`
+- `suspended`
+- `inactive`
 
 A business may manage multiple venues.
 
@@ -147,39 +147,39 @@ Represents a physical place users can discover.
 
 Examples:
 
-* Bar
-* Restaurant
-* Café
-* Brewery
-* Food truck
+- Bar
+- Restaurant
+- Café
+- Brewery
+- Food truck
 
 ## Fields
 
-* `id`
-* `businessId`
-* `name`
-* `description`
-* `categoryId`
-* `address`
-* `city`
-* `latitude`
-* `longitude`
-* `priceLevel`
-* `openingHours`
-* `phone`
-* `status`
-* `createdAt`
-* `updatedAt`
+- `id`
+- `businessId`
+- `name`
+- `description`
+- `categoryId`
+- `address`
+- `city`
+- `latitude`
+- `longitude`
+- `priceLevel`
+- `openingHours`
+- `phone`
+- `status`
+- `createdAt`
+- `updatedAt`
 
 ## Status
 
 Possible values:
 
-* `draft`
-* `pending`
-* `published`
-* `temporarilyClosed`
-* `closed`
+- `draft`
+- `pending`
+- `published`
+- `temporarilyClosed`
+- `closed`
 
 ---
 
@@ -189,21 +189,21 @@ Represents the primary category of a venue.
 
 Examples:
 
-* Restaurant
-* Bar
-* Café
-* Brewery
-* Food truck
-* Bakery
+- Restaurant
+- Bar
+- Café
+- Brewery
+- Food truck
+- Bakery
 
 ## Fields
 
-* `id`
-* `name`
-* `slug`
-* `description`
-* `icon`
-* `active`
+- `id`
+- `name`
+- `slug`
+- `description`
+- `icon`
+- `active`
 
 ---
 
@@ -213,22 +213,22 @@ Represents characteristics used for discovery and recommendations.
 
 Examples:
 
-* Quiet
-* Lively
-* Romantic
-* Family-friendly
-* Outdoor
-* Good for groups
-* Live music
-* Coffee
-* Craft beer
+- Quiet
+- Lively
+- Romantic
+- Family-friendly
+- Outdoor
+- Good for groups
+- Live music
+- Coffee
+- Craft beer
 
 ## Fields
 
-* `id`
-* `name`
-* `slug`
-* `type`
+- `id`
+- `name`
+- `slug`
+- `type`
 
 Tags should be reusable across venues.
 
@@ -240,8 +240,8 @@ Represents the relationship between a venue and a tag.
 
 ## Fields
 
-* `venueId`
-* `tagId`
+- `venueId`
+- `tagId`
 
 A venue may have multiple tags.
 
@@ -255,13 +255,13 @@ Stores images associated with a venue.
 
 ## Fields
 
-* `id`
-* `venueId`
-* `url`
-* `altText`
-* `sortOrder`
-* `isPrimary`
-* `createdAt`
+- `id`
+- `venueId`
+- `url`
+- `altText`
+- `sortOrder`
+- `isPrimary`
+- `createdAt`
 
 Images should be stored using an appropriate external object-storage solution.
 
@@ -273,23 +273,23 @@ Represents a venue's menu.
 
 ## Fields
 
-* `id`
-* `venueId`
-* `name`
-* `description`
-* `active`
-* `createdAt`
-* `updatedAt`
+- `id`
+- `venueId`
+- `name`
+- `description`
+- `active`
+- `createdAt`
+- `updatedAt`
 
 A venue may have more than one menu.
 
 Examples:
 
-* Main menu
-* Drinks
-* Cocktails
-* Lunch
-* Dinner
+- Main menu
+- Drinks
+- Cocktails
+- Lunch
+- Dinner
 
 ---
 
@@ -299,21 +299,21 @@ Represents a category within a menu.
 
 Examples:
 
-* Starters
-* Main dishes
-* Desserts
-* Cocktails
-* Beer
-* Coffee
+- Starters
+- Main dishes
+- Desserts
+- Cocktails
+- Beer
+- Coffee
 
 ## Fields
 
-* `id`
-* `menuId`
-* `name`
-* `description`
-* `sortOrder`
-* `active`
+- `id`
+- `menuId`
+- `name`
+- `description`
+- `sortOrder`
+- `active`
 
 ---
 
@@ -323,17 +323,17 @@ Represents an item that can appear on a menu.
 
 ## Fields
 
-* `id`
-* `menuCategoryId`
-* `name`
-* `description`
-* `price`
-* `currency`
-* `imageUrl`
-* `available`
-* `sortOrder`
-* `createdAt`
-* `updatedAt`
+- `id`
+- `menuCategoryId`
+- `name`
+- `description`
+- `price`
+- `currency`
+- `imageUrl`
+- `available`
+- `sortOrder`
+- `createdAt`
+- `updatedAt`
 
 The `available` field allows businesses to temporarily disable an item without deleting it.
 
@@ -345,19 +345,19 @@ Represents optional customizations for a menu item.
 
 Examples:
 
-* Extra cheese
-* No onions
-* Large size
-* Add sauce
+- Extra cheese
+- No onions
+- Large size
+- Add sauce
 
 ## Fields
 
-* `id`
-* `menuItemId`
-* `name`
-* `description`
-* `priceAdjustment`
-* `available`
+- `id`
+- `menuItemId`
+- `name`
+- `description`
+- `priceAdjustment`
+- `available`
 
 Modifiers should be optional.
 
@@ -369,19 +369,19 @@ Represents a physical table or seating location.
 
 ## Fields
 
-* `id`
-* `venueId`
-* `name`
-* `capacity`
-* `locationDescription`
-* `active`
+- `id`
+- `venueId`
+- `name`
+- `capacity`
+- `locationDescription`
+- `active`
 
 Examples:
 
-* Table 1
-* Table 2
-* Patio 4
-* Bar Seat 8
+- Table 1
+- Table 2
+- Patio 4
+- Bar Seat 8
 
 A table may be associated with a QR code.
 
@@ -393,29 +393,29 @@ Represents a customer reservation.
 
 ## Fields
 
-* `id`
-* `userId`
-* `venueId`
-* `tableId` — optional
-* `date`
-* `startTime`
-* `endTime` — optional
-* `partySize`
-* `status`
-* `notes` — optional
-* `createdAt`
-* `updatedAt`
+- `id`
+- `userId`
+- `venueId`
+- `tableId` — optional
+- `date`
+- `startTime`
+- `endTime` — optional
+- `partySize`
+- `status`
+- `notes` — optional
+- `createdAt`
+- `updatedAt`
 
 ## Status
 
 Possible values:
 
-* `pending`
-* `confirmed`
-* `cancelled`
-* `completed`
-* `noShow`
-* `declined`
+- `pending`
+- `confirmed`
+- `cancelled`
+- `completed`
+- `noShow`
+- `declined`
 
 The reservation system should prevent invalid overlapping reservations.
 
@@ -427,31 +427,31 @@ Represents a customer order.
 
 ## Fields
 
-* `id`
-* `userId` — optional for guest ordering
-* `venueId`
-* `tableId` — optional
-* `reservationId` — optional
-* `status`
-* `subtotal`
-* `discount`
-* `total`
-* `currency`
-* `notes`
-* `createdAt`
-* `updatedAt`
+- `id`
+- `userId` — optional for guest ordering
+- `venueId`
+- `tableId` — optional
+- `reservationId` — optional
+- `status`
+- `subtotal`
+- `discount`
+- `total`
+- `currency`
+- `notes`
+- `createdAt`
+- `updatedAt`
 
 ## Status
 
 Possible values:
 
-* `received`
-* `accepted`
-* `preparing`
-* `ready`
-* `served`
-* `completed`
-* `cancelled`
+- `received`
+- `accepted`
+- `preparing`
+- `ready`
+- `served`
+- `completed`
+- `cancelled`
 
 ---
 
@@ -461,14 +461,14 @@ Represents an individual item within an order.
 
 ## Fields
 
-* `id`
-* `orderId`
-* `menuItemId`
-* `nameSnapshot`
-* `priceSnapshot`
-* `quantity`
-* `notes`
-* `subtotal`
+- `id`
+- `orderId`
+- `menuItemId`
+- `nameSnapshot`
+- `priceSnapshot`
+- `quantity`
+- `notes`
+- `subtotal`
 
 The order should store snapshots of item name and price.
 
@@ -482,22 +482,22 @@ Represents a QR code associated with a venue or table.
 
 ## Fields
 
-* `id`
-* `venueId`
-* `tableId` — optional
-* `type`
-* `token`
-* `active`
-* `createdAt`
+- `id`
+- `venueId`
+- `tableId` — optional
+- `type`
+- `token`
+- `active`
+- `createdAt`
 
 ## Types
 
 Possible values:
 
-* `venue`
-* `table`
-* `menu`
-* `ordering`
+- `venue`
+- `table`
+- `menu`
+- `ordering`
 
 QR tokens should not expose sensitive internal identifiers unnecessarily.
 
@@ -509,10 +509,10 @@ Represents a venue saved by a customer.
 
 ## Fields
 
-* `id`
-* `userId`
-* `venueId`
-* `createdAt`
+- `id`
+- `userId`
+- `venueId`
+- `createdAt`
 
 A user should not be able to save the same venue multiple times.
 
@@ -530,24 +530,24 @@ A transaction-based system is preferred over storing only a mutable balance.
 
 ## Fields
 
-* `id`
-* `userId`
-* `amount`
-* `type`
-* `referenceType`
-* `referenceId`
-* `description`
-* `createdAt`
+- `id`
+- `userId`
+- `amount`
+- `type`
+- `referenceType`
+- `referenceId`
+- `description`
+- `createdAt`
 
 ## Types
 
 Examples:
 
-* `earned`
-* `spent`
-* `bonus`
-* `adjustment`
-* `expired`
+- `earned`
+- `spent`
+- `bonus`
+- `adjustment`
+- `expired`
 
 The current balance can be calculated from transactions or maintained as a cached value.
 
@@ -559,18 +559,18 @@ Represents a reward available through Conto.
 
 ## Fields
 
-* `id`
-* `venueId` — optional
-* `businessId` — optional
-* `name`
-* `description`
-* `costInContoCoins`
-* `validFrom`
-* `validUntil`
-* `active`
-* `usageLimit`
-* `createdAt`
-* `updatedAt`
+- `id`
+- `venueId` — optional
+- `businessId` — optional
+- `name`
+- `description`
+- `costInContoCoins`
+- `validFrom`
+- `validUntil`
+- `active`
+- `usageLimit`
+- `createdAt`
+- `updatedAt`
 
 ---
 
@@ -580,22 +580,22 @@ Represents a reward acquired by a customer.
 
 ## Fields
 
-* `id`
-* `userId`
-* `rewardId`
-* `status`
-* `redeemedAt`
-* `expiresAt`
-* `createdAt`
+- `id`
+- `userId`
+- `rewardId`
+- `status`
+- `redeemedAt`
+- `expiresAt`
+- `createdAt`
 
 ## Status
 
 Possible values:
 
-* `available`
-* `redeemed`
-* `expired`
-* `cancelled`
+- `available`
+- `redeemed`
+- `expired`
+- `cancelled`
 
 ---
 
@@ -605,19 +605,19 @@ Represents a promotional campaign created by a business.
 
 ## Fields
 
-* `id`
-* `businessId`
-* `venueId` — optional
-* `title`
-* `description`
-* `rewardType`
-* `rewardValue`
-* `validFrom`
-* `validUntil`
-* `usageLimit`
-* `active`
-* `createdAt`
-* `updatedAt`
+- `id`
+- `businessId`
+- `venueId` — optional
+- `title`
+- `description`
+- `rewardType`
+- `rewardValue`
+- `validFrom`
+- `validUntil`
+- `usageLimit`
+- `active`
+- `createdAt`
+- `updatedAt`
 
 ---
 
@@ -629,24 +629,24 @@ For the MVP, recommendations may be generated dynamically instead of permanently
 
 If stored, the entity may contain:
 
-* `id`
-* `userId`
-* `venueId`
-* `reason`
-* `score`
-* `source`
-* `createdAt`
-* `expiresAt`
+- `id`
+- `userId`
+- `venueId`
+- `reason`
+- `score`
+- `source`
+- `createdAt`
+- `expiresAt`
 
 ## Possible sources
 
-* `preferences`
-* `behavior`
-* `location`
-* `popular`
-* `promotion`
-* `business`
-* `algorithm`
+- `preferences`
+- `behavior`
+- `location`
+- `popular`
+- `promotion`
+- `business`
+- `algorithm`
 
 ---
 
@@ -656,25 +656,25 @@ Represents a notification sent to a user.
 
 ## Fields
 
-* `id`
-* `userId`
-* `type`
-* `title`
-* `body`
-* `referenceType`
-* `referenceId`
-* `readAt`
-* `createdAt`
+- `id`
+- `userId`
+- `type`
+- `title`
+- `body`
+- `referenceType`
+- `referenceId`
+- `readAt`
+- `createdAt`
 
 Possible notification types:
 
-* Reservation confirmation.
-* Reservation reminder.
-* Reservation cancellation.
-* Order update.
-* Reward available.
-* Promotion.
-* Recommendation.
+- Reservation confirmation.
+- Reservation reminder.
+- Reservation cancellation.
+- Order update.
+- Reward available.
+- Promotion.
+- Recommendation.
 
 ---
 
@@ -716,14 +716,14 @@ Business
 
 Users interact with venues through:
 
-* Views.
-* Searches.
-* Saves.
-* Reservations.
-* Visits.
-* Orders.
-* Rewards.
-* Feedback.
+- Views.
+- Searches.
+- Saves.
+- Reservations.
+- Visits.
+- Orders.
+- Rewards.
+- Feedback.
 
 These interactions may later become recommendation signals.
 
@@ -800,9 +800,9 @@ MenuItems
 
 An order may also be associated with:
 
-* Table.
-* Reservation.
-* QR session.
+- Table.
+- Reservation.
+- QR session.
 
 ---
 
@@ -836,14 +836,14 @@ Personalization should use multiple signals.
 
 Initial signals:
 
-* Explicit preferences.
-* Saved venues.
-* Viewed venues.
-* Search queries.
-* Categories explored.
-* Reservation history.
-* Order history.
-* Reward interactions.
+- Explicit preferences.
+- Saved venues.
+- Viewed venues.
+- Search queries.
+- Categories explored.
+- Reservation history.
+- Order history.
+- Reward interactions.
 
 Not every signal needs to be stored permanently in the MVP.
 
@@ -855,10 +855,10 @@ The architecture should allow additional behavioral signals later.
 
 Venue location should contain:
 
-* Address.
-* City.
-* Latitude.
-* Longitude.
+- Address.
+- City.
+- Latitude.
+- Longitude.
 
 User location should be treated separately from venue location.
 
@@ -874,12 +874,12 @@ Important business operations should be traceable.
 
 Examples:
 
-* Reservation creation.
-* Reservation cancellation.
-* Order status changes.
-* Reward redemption.
-* ContoCoin adjustments.
-* Business profile changes.
+- Reservation creation.
+- Reservation cancellation.
+- Order status changes.
+- Reward redemption.
+- ContoCoin adjustments.
+- Business profile changes.
 
 The implementation may use an audit log or structured event system.
 
@@ -891,11 +891,11 @@ Every protected resource must have an explicit ownership or authorization rule.
 
 Examples:
 
-* A customer can access their own reservations.
-* A customer can access their own rewards.
-* A business can manage only its own venues.
-* A business can manage only its own menus.
-* A business can access only its own orders and reservations.
+- A customer can access their own reservations.
+- A customer can access their own rewards.
+- A business can manage only its own venues.
+- A business can manage only its own menus.
+- A business can access only its own orders and reservations.
 
 Authorization must be enforced server-side.
 
@@ -907,20 +907,20 @@ Some functionality should support anonymous users.
 
 Potential guest functionality:
 
-* Browse venues.
-* Search.
-* View venue profiles.
-* View menus.
-* Scan QR codes.
-* Browse menu items.
+- Browse venues.
+- Search.
+- View venue profiles.
+- View menus.
+- Scan QR codes.
+- Browse menu items.
 
 Authentication may be required for:
 
-* Saving.
-* Reservations.
-* Rewards.
-* ContoCoins.
-* Personalized history.
+- Saving.
+- Reservations.
+- Rewards.
+- ContoCoins.
+- Personalized history.
 
 Ordering should support guest access if the business and payment architecture allow it.
 
@@ -930,10 +930,10 @@ Ordering should support guest access if the business and payment architecture al
 
 Entities should generally support:
 
-* Creation.
-* Update.
-* Deactivation.
-* Archiving where appropriate.
+- Creation.
+- Update.
+- Deactivation.
+- Archiving where appropriate.
 
 Important historical records should not be physically deleted when doing so would destroy operational or financial integrity.
 
@@ -947,10 +947,10 @@ Where appropriate, use a status field instead of permanently deleting records.
 
 Examples:
 
-* Venue → `inactive`
-* Menu item → `available: false`
-* Business → `suspended`
-* Reward → `active: false`
+- Venue → `inactive`
+- Menu item → `available: false`
+- Business → `suspended`
+- Reward → `active: false`
 
 Permanent deletion should be reserved for cases where it is genuinely required.
 
@@ -960,16 +960,16 @@ Permanent deletion should be reserved for cases where it is genuinely required.
 
 Important entities should include:
 
-* `createdAt`
-* `updatedAt`
+- `createdAt`
+- `updatedAt`
 
 Time-sensitive entities may additionally include:
 
-* `startedAt`
-* `completedAt`
-* `cancelledAt`
-* `expiresAt`
-* `redeemedAt`
+- `startedAt`
+- `completedAt`
+- `cancelledAt`
+- `expiresAt`
+- `redeemedAt`
 
 All timestamps should be stored consistently in UTC at the backend level.
 
@@ -1009,11 +1009,11 @@ Avoid arbitrary strings where the value represents a finite state machine.
 
 Examples:
 
-* Reservation status.
-* Order status.
-* Business status.
-* Venue status.
-* Reward status.
+- Reservation status.
+- Order status.
+- Business status.
+- Venue status.
+- Reward status.
 
 This reduces inconsistent data.
 
@@ -1037,17 +1037,17 @@ Indexes should be created for common queries.
 
 Likely initial indexes include:
 
-* Venue by location.
-* Venue by category.
-* Venue by status.
-* Reservation by venue and date.
-* Reservation by user.
-* Order by venue and status.
-* Order by user.
-* Saved venues by user.
-* Rewards by user.
-* ContoCoin transactions by user.
-* Menu items by menu category.
+- Venue by location.
+- Venue by category.
+- Venue by status.
+- Reservation by venue and date.
+- Reservation by user.
+- Order by venue and status.
+- Order by user.
+- Saved venues by user.
+- Rewards by user.
+- ContoCoin transactions by user.
+- Menu items by menu category.
 
 Indexes should be added based on the actual database technology selected.
 
@@ -1073,19 +1073,19 @@ Language should eventually be localizable.
 
 Potential future entities include:
 
-* Event.
-* UserGroup.
-* SharedPlan.
-* SocialConnection.
-* Review.
-* CheckIn.
-* Payment.
-* Subscription.
-* LoyaltyTier.
-* AIRecommendation.
-* Conversation.
-* Experience.
-* ReservationWaitlist.
+- Event.
+- UserGroup.
+- SharedPlan.
+- SocialConnection.
+- Review.
+- CheckIn.
+- Payment.
+- Subscription.
+- LoyaltyTier.
+- AIRecommendation.
+- Conversation.
+- Experience.
+- ReservationWaitlist.
 
 These should not be implemented unless required by the MVP.
 
@@ -1105,7 +1105,7 @@ Every MVP entity should have a clear relationship to an actual product requireme
 
 The exact database technology, schema syntax, indexes, security rules, migrations, and backend implementation must be defined in:
 
-`08-tech-stack.md`
+`07-tech-stack.md`
 
 The Product Specification defines **what the system needs**.
 

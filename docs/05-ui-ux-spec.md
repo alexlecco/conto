@@ -1,13 +1,8 @@
-`05-ui-ux-spec.md`
-
-Copiá todo esto dentro del archivo:
-
-```md
 # Conto — UI/UX Specification
 
-**Document status:** Draft  
-**Version:** 0.1  
-**Product:** Conto  
+**Document status:** Draft
+**Version:** 0.1
+**Product:** Conto
 **Purpose:** Define the visual, interaction, navigation, accessibility, and responsive experience requirements for the Conto MVP.
 
 ---
@@ -1084,5 +1079,3 @@ The interface should reduce decision fatigue, not add to it.
 The ideal user reaction is:
 
 > "Ah, this is exactly what I was looking for."
-
-```

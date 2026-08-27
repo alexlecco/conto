@@ -1,8 +1,354 @@
-`08-ai-spec.md`
+# Conto — AI Specification
+
+**Document status:** Draft
+**Version:** 0.1
+**Product:** Conto
+**Purpose:** Define the role, scope, constraints, security requirements, and operational rules for AI within the Conto MVP.
 
 ---
 
-# AI may assist with:
+# 1. AI Principles
+
+AI within Conto must follow these principles:
+
+1. AI is an assistant, not the source of truth.
+2. AI must never independently control authorization, reservation availability, order totals, ContoCoins, rewards, payments, or security decisions.
+3. AI-generated structured data must be validated before use.
+4. AI output must never directly execute privileged operations.
+5. AI should enhance the product without making it less reliable.
+6. The core system must remain deterministic.
+7. AI must not become a single point of failure.
+
+---
+
+# 2. AI Scope
+
+AI features in the MVP are limited to:
+
+**Must have for MVP:**
+
+- Recommendation explanations.
+- Personalized recommendation reasons.
+
+**Should have for MVP:**
+
+- Natural-language discovery.
+- Intent extraction.
+- Business content assistance.
+
+**Could have for MVP:**
+
+- Conversational assistant.
+- Advanced recommendation ranking.
+
+**Not in MVP:**
+
+- Autonomous multi-step agents.
+- Complex business automation.
+- AI-controlled financial operations.
+
+The MVP must remain fully functional if all AI features fail.
+
+---
+
+# 3. AI Architecture
+
+The application should use an abstracted AI service layer.
+
+Conceptually:
+
+```
+AIService
+   ├── LocalModelProvider
+   ├── FreeCloudModelProvider
+   └── PaidModelProvider
+```
+
+The initial implementation may use only one provider.
+
+The architecture must allow changing providers without rewriting the application.
+
+AI configuration should be centralized:
+
+```
+AI_PROVIDER
+AI_MODEL
+AI_BASE_URL
+AI_MAX_TOKENS
+AI_TEMPERATURE
+```
+
+Secrets must remain outside source control.
+
+---
+
+# 4. Development AI vs Product AI
+
+The architecture must maintain two independent AI configurations:
+
+```
+OPEN_CODE_AI
+    ↓
+Developer productivity
+```
+
+```
+CONTO_AI
+    ↓
+User-facing product functionality
+```
+
+The model that writes code does not need to be the model that powers Conto's user-facing AI.
+
+They may use the same model initially, but they must not be architecturally coupled.
+
+The coding model is selected based on:
+
+- TypeScript performance.
+- React performance.
+- Next.js performance.
+- SQL performance.
+- Long-context reasoning.
+- Cost (free or local preferred).
+
+The production model is selected based on:
+
+- User experience.
+- Latency.
+- Cost.
+- Quality.
+- Privacy.
+- Availability.
+
+---
+
+# 5. AI in Discovery and Recommendations
+
+AI may assist with:
+
+- Generating personalized recommendation reasons.
+- Explaining why a venue is relevant to a user.
+- Matching user preferences to venue characteristics.
+
+AI must never:
+
+- Invent venue characteristics that do not exist in the database.
+- Override deterministic recommendation logic without validation.
+- Assume a user's preferences without explicit signals or behavioral data.
+
+Recommendation explanations should be concise and grounded in actual venue data.
+
+Example:
+
+> "Quiet atmosphere and great coffee."
+
+Not:
+
+> "This venue has a 94% match score."
+
+---
+
+# 6. AI in Search
+
+AI may assist with:
+
+- Understanding natural-language search queries.
+- Extracting intent from user input.
+- Mapping free-text queries to filterable attributes.
+
+AI must not:
+
+- Return results for venues that do not match the query.
+- Bypass the search API.
+- Invent search results.
+
+Search must remain functional without AI.
+
+---
+
+# 7. AI in Personalization
+
+AI may assist with:
+
+- Interpreting user preferences from onboarding.
+- Adjusting recommendations based on behavior.
+- Identifying patterns in user interactions.
+
+AI must never:
+
+- Create rigid user categories.
+- Make preferences permanent without user consent.
+- Override the user's ability to explore everything.
+
+Users must always have a clear option to:
+
+- Skip personalization.
+- Reset preferences.
+- Explore everything.
+
+---
+
+# 8. AI in Venue Information
+
+AI may assist with:
+
+- Generating venue descriptions.
+- Suggesting atmosphere tags.
+- Improving venue copy.
+
+AI-generated venue content must:
+
+- Be reviewed by the business before publishing.
+- Not invent factual claims about the venue.
+- Not fabricate amenities, services, or attributes.
+
+Business users must be able to edit or reject AI-generated content.
+
+---
+
+# 9. AI in Menus
+
+AI may assist with:
+
+- Menu discovery.
+- Item recommendations based on preferences.
+- Suggesting menu descriptions.
+
+However:
+
+- Menu items must come from the actual menu.
+- Prices must come from the backend.
+- Order totals must be calculated by the backend.
+- Order creation must go through the normal order API.
+
+AI must not invent menu items, prices, or availability.
+
+---
+
+# 10. AI in Ordering
+
+AI may assist with:
+
+- Suggesting items based on user preferences.
+- Helping users customize orders.
+- Explaining order status.
+
+AI must never:
+
+- Calculate order totals.
+- Modify prices.
+- Submit orders without backend validation.
+- Override item availability.
+
+All order operations must go through the standard order API.
+
+---
+
+# 11. AI in Reservations
+
+AI may assist with:
+
+- Suggesting suitable times based on user preferences.
+- Explaining reservation availability.
+- Recommending venues for specific occasions.
+
+AI must never:
+
+- Create reservations without explicit user confirmation.
+- Override availability checks.
+- Modify reservation status.
+- Bypass the reservation API.
+
+All reservation operations must go through the standard reservation API.
+
+---
+
+# 12. AI and Customer Support
+
+AI may eventually assist with:
+
+- Answering common questions.
+- Guiding users through flows.
+- Explaining features.
+
+AI must never:
+
+- Access private user data without authorization.
+- Modify account settings.
+- Process refunds or handle payments.
+- Override security policies.
+
+---
+
+# 13. AI and Business Operations
+
+Future AI capabilities may help businesses:
+
+- Write venue descriptions.
+- Improve menu descriptions.
+- Create promotional copy.
+- Summarize business activity.
+- Analyze customer trends.
+- Suggest promotions.
+
+AI-generated business content must remain editable by the business.
+
+AI must not autonomously publish content without business approval.
+
+---
+
+# 14. AI Content Approval
+
+AI-generated content should not automatically become public in situations where incorrect content could materially affect users.
+
+For business-facing generated content:
+
+```
+Generate
+   ↓
+Preview
+   ↓
+Business Review
+   ↓
+Approve
+   ↓
+Publish
+```
+
+---
+
+# 15. AI Recommendations and Personalization Engine
+
+The personalization engine may use AI to improve recommendations over time.
+
+Signals that may be used:
+
+- User-selected preferences.
+- Saved venues.
+- Viewed venues.
+- Search queries.
+- Categories explored.
+- Reservation history.
+- Order history.
+- Reward interactions.
+
+For the MVP, personalization should remain simple.
+
+A rules-based recommendation system is acceptable initially.
+
+The architecture should allow a more sophisticated recommendation model to be introduced later.
+
+AI-generated recommendations must:
+
+- Be grounded in actual venue data.
+- Be explainable in simple terms.
+- Allow the user to override or ignore them.
+
+---
+
+# 16. AI and Core Business Rules
+
+AI may assist with:
 
 - Menu discovery.
 - Item recommendations.

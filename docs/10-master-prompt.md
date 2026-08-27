@@ -1,167 +1,100 @@
 # Conto — Master Implementation Prompt
 
-## Role
-
-You are the primary AI software engineering agent for the Conto project.
-
-Your responsibility is to turn the product and engineering specifications in this repository into a working, maintainable, secure application.
-
-You are not an unrestricted autonomous agent.
-
-You must follow the repository documentation, inspect the existing code before modifying it, and never invent requirements silently.
+**Document status:** Draft
+**Version:** 0.1
+**Product:** Conto
+**Purpose:** Define the initial implementation mission, execution order, and constraints for building Conto.
 
 ---
 
-# 1. Project Context
+# 1. Mission
 
-Conto is a mobile-first platform that helps people discover, choose, reserve, and experience bars, restaurants, cafés, breweries, and other places to go out.
+Build Conto's MVP as a mobile-first web application.
 
-The core product loop is:
+The MVP must allow a customer to:
 
-**Discover → Decide → Reserve / Visit → Order → Enjoy → Return**
+1. Discover venues.
+2. Explore venue details.
+3. Save interesting places.
+4. Make a reservation.
+5. View a menu.
+6. Place an order where supported.
+7. Earn and redeem rewards.
 
-The MVP is intentionally focused.
+The MVP must allow a business to:
 
-Do not expand the scope without an explicit requirement.
-
----
-
-# 2. Documentation Source of Truth
-
-Before implementing anything, read and understand the relevant files in:
-
-```text
-docs/
-```
-
-The current specification set is:
-
-```text
-docs/
-├── 00-vision.md
-├── 01-product-spec.md
-├── 02-user-flows.md
-├── 03-data-model.md
-├── 04-api-spec.md
-├── 05-ui-ux-spec.md
-├── 06-security-spec.md
-├── 07-tech-stack.md
-├── 08-ai-spec.md
-├── 09-dev-workflow.md
-└── 10-master-prompt.md
-```
-
-`10-master-prompt.md` orchestrates implementation.
-
-The other documents contain the detailed requirements.
-
-Do not duplicate their contents unnecessarily.
+1. Manage venue information.
+2. Manage menus.
+3. Manage availability.
+4. Manage reservations.
+5. Receive orders.
+6. Participate in the rewards ecosystem.
 
 ---
 
-# 3. Before Coding
+# 2. Product Source of Truth
 
-Before writing application code:
+The product definition lives in:
 
-1. Inspect the repository.
-2. Inspect the current project structure.
-3. Inspect existing configuration files.
-4. Inspect package manifests.
-5. Inspect existing source code.
-6. Identify whether an application already exists.
-7. Identify which parts of the specifications are already implemented.
-8. Identify inconsistencies between documentation and repository state.
-9. Identify missing prerequisites.
-10. Produce a concise implementation plan.
+* `docs/00-vision.md`
+* `docs/01-product-spec.md`
+* `docs/02-user-flows.md`
 
-Do not assume the repository is empty.
-
-Do not overwrite existing implementation without understanding it.
+These documents define **what Conto should do and why**.
 
 ---
 
-# 4. Specification Consistency
+# 3. Technical Source of Truth
 
-Before substantial implementation, perform a consistency check across:
+The technical foundation lives in:
 
-* Product requirements.
-* User flows.
-* Data model.
-* API contract.
-* UI/UX.
-* Security.
-* Technology stack.
-* AI requirements.
-* Development workflow.
+* `docs/03-data-model.md`
+* `docs/04-api-spec.md`
+* `docs/05-ui-ux-spec.md`
+* `docs/06-security-spec.md`
+* `docs/07-tech-stack.md`
+* `docs/08-ai-spec.md`
 
-Pay special attention to:
-
-* Entity names.
-* User roles.
-* API endpoints.
-* State values.
-* Reservation states.
-* Order states.
-* Reward states.
-* Authentication assumptions.
-* Technology choices.
-
-If an inconsistency materially affects implementation, identify it before proceeding.
-
-Do not silently resolve major contradictions.
+These documents define **how the system should be built**.
 
 ---
 
-# 5. Technical Baseline
+# 4. Workflow Source of Truth
 
-Unless the repository already contains a validated alternative implementation, use the stack defined in:
+The development workflow lives in:
 
-`docs/07-tech-stack.md`
+* `docs/09-dev-workflow.md`
 
-The intended baseline is:
-
-* TypeScript.
-* Node.js.
-* pnpm.
-* Next.js.
-* React.
-* Tailwind CSS.
-* shadcn/ui-style components.
-* PostgreSQL.
-* Prisma.
-* Zod.
-* Vitest.
-* Playwright.
-* ESLint.
-* Prettier.
-
-Keep the architecture modular and monolithic for the MVP.
+This document defines **how OpenCode should operate within the project**.
 
 ---
 
-# 6. Application Architecture
+# 5. Implementation Approach
 
-Use this conceptual architecture:
+The implementation must proceed incrementally.
 
-```text
-UI
- ↓
-Application / Route Layer
- ↓
-Service / Domain Layer
- ↓
-Data Access Layer
- ↓
-PostgreSQL
-```
+Do not attempt to generate the entire product in one pass.
 
-Keep business logic out of UI components.
+Each implementation step should:
 
-Keep route handlers thin.
+1. Be small enough to verify.
+2. Preserve existing functionality.
+3. Follow the relevant specifications.
+4. Include appropriate tests.
+5. Leave the system in a working state.
 
-Keep database-specific details out of user-facing components.
+---
 
-Use domain-oriented modules where practical.
+# 6. Quality Expectations
+
+The MVP must meet these quality expectations:
+
+* Correct behavior over clever implementation.
+* Security over convenience.
+* Simplicity over abstraction.
+* Testability over speed of generation.
+* Maintainability over novelty.
+* Real functionality over simulated progress.
 
 ---
 
@@ -261,382 +194,282 @@ Implement:
 Implement:
 
 * Coin ledger.
-* Balance.
-* Rewards.
-* Redemption.
-* Basic business promotions.
+* Balance display.
+* Earning rules.
+* Reward definitions.
+* Redemption flow.
 
-### Phase 8 — Personalization and AI
+### Phase 8 — AI Features
 
-Implement only after the deterministic core works:
+Implement:
 
-* Natural-language discovery.
-* Intent extraction.
 * Recommendation explanations.
-* Improved personalization.
-
-AI must not become a dependency for the core product.
-
-### Phase 9 — Hardening
-
-Perform:
-
-* Security review.
-* Accessibility review.
-* Performance review.
-* E2E coverage.
-* Error handling review.
-* Documentation review.
+* Personalization support.
+* Natural-language discovery where appropriate.
 
 ---
 
-# 8. Core Product Rule
+# 8. Non-Functional Requirements
 
-The first usable version should prove:
+The MVP must also satisfy:
 
-```text
-Open Conto
-   ↓
-Explore
-   ↓
-Find a relevant venue
-   ↓
-View venue
-   ↓
-Save or reserve
-```
-
-Do not delay this loop because of advanced functionality.
+* Responsive design.
+* Accessibility basics.
+* Error handling.
+* Loading states.
+* Empty states.
+* Security constraints.
+* Environment configuration.
+* Deployment readiness.
 
 ---
 
-# 9. Authentication Rule
+# 9. MVP Success Criteria
 
-Users should be able to explore without authentication.
+The MVP is successful if:
 
-Require authentication only when the action actually needs identity or persistence.
-
-Examples:
-
-* Saving.
-* Reservations.
-* Rewards.
-* Personalized history.
-
-After authentication, restore the user's previous context whenever practical.
-
----
-
-# 10. Security Rule
-
-The backend is the authority for:
-
-* Identity.
-* Authorization.
-* Reservation availability.
-* Order totals.
-* ContoCoin balances.
-* Reward eligibility.
-* Business permissions.
-* Critical state transitions.
-
-Never trust the client for these values.
+1. A customer can discover and explore venues.
+2. A customer can save venues.
+3. A customer can make and manage reservations.
+4. A customer can view menus.
+5. A customer can place orders where supported.
+6. A customer can earn and redeem rewards.
+7. A business can manage its presence.
+8. The application is secure, testable, and maintainable.
+9. The codebase is clean, well-structured, and extendable.
 
 ---
 
-# 11. Data Rule
+# 10. Constraints
 
-Use the data model in:
+The implementation must respect:
 
-`docs/03-data-model.md`
+* The approved technology stack.
+* The defined architecture.
+* The security specification.
+* The data model.
+* The API contracts.
+* The workflow rules.
 
-Do not invent fields merely because they seem useful.
+Do not introduce:
 
-If an additional field becomes necessary:
-
-1. Explain why.
-2. Update the relevant specification.
-3. Implement the schema change.
-4. Create a migration.
-5. Update tests.
-
----
-
-# 12. API Rule
-
-Use:
-
-`docs/04-api-spec.md`
-
-as the API contract.
-
-Do not expose raw database operations as the public API.
-
-Critical mutations must perform server-side validation and authorization.
+* Alternative frameworks.
+* Alternative databases.
+* Alternative architectures.
+* Undocumented features.
+* Speculative abstractions.
 
 ---
 
-# 13. UI Rule
+# 11. Documentation Requirement
 
-Use:
+Every significant implementation decision must be traceable to a document in `docs/`.
 
-`docs/05-ui-ux-spec.md`
+If a requirement is missing, identify the gap before inventing a solution.
 
-as the UI/UX authority.
+If a conflict exists between documents, follow the hierarchy:
 
-Every important screen must consider:
-
-* Loading.
-* Empty.
-* Error.
-* Disabled.
-* Unauthorized.
-* Success.
-
-The interface must remain mobile-first and accessible.
+1. Vision.
+2. Product specification.
+3. User flows.
+4. Security specification.
+5. Technical specifications.
 
 ---
 
-# 14. AI Rule
+# 12. Final Constraint
 
-Use:
+The MVP must be built as a real, working product.
 
-`docs/08-ai-spec.md`
+Do not generate placeholder logic.
 
-for AI behavior.
+Do not generate fake integrations.
 
-AI is optional enhancement, not system authority.
+Do not generate incomplete features disguised as complete.
 
-AI must never:
-
-* Bypass authorization.
-* Access the database directly.
-* Execute arbitrary commands.
-* Modify critical state without backend validation.
-* Invent venue facts.
-* Invent prices.
-* Invent availability.
-* Invent rewards.
-
-Structured AI output must be validated.
+Build only what is specified. Build it correctly. Stop when the MVP is complete.
 
 ---
 
-# 15. OpenCode / Coding Model Rule
+# 13. OpenCode Behavioral Constraints
 
-The development environment may use OpenCode or another compatible coding agent.
+OpenCode must not:
 
-The coding model is replaceable.
-
-Do not hard-code application behavior around a particular AI provider.
-
-For the current free OpenCode workflow, use the currently available free coding-oriented model selected from the OpenCode model catalog, with a documented fallback.
-
-Do not assume that a particular free model will remain free forever.
+* Modify security-critical logic without explicit review.
+* Change data models without confirming product impact.
+* Alter API contracts without checking downstream effects.
+* Skip tests to accelerate delivery.
+* Introduce new libraries without justification.
+* Refactor unrelated code during feature work.
+* Make business decisions that belong to the product specification.
 
 ---
 
-# 16. No Fake Functionality
+# 14.例外時の対応
 
-Never simulate successful backend operations.
+When something is ambiguous:
 
-Bad:
+1. Check the specification.
+2. Check the data model.
+3. Check the user flow.
+4. If still unclear, stop and ask.
 
-```text
-Reservation confirmed
-```
+Do not guess. Do not assume. Do not silently choose an interpretation that could break the product.
 
-when no reservation exists.
+---
 
-Bad:
+# 15. MVP Boundary
 
-```text
-Order placed
-```
+The MVP does **not** include:
 
-when no order was persisted.
+* Multi-language support.
+* Advanced analytics.
+* Payments.
+* Driver/delivery logic.
+* Complex AI automation.
+* Custom business dashboards beyond the basics.
+* Admin panels beyond what is specified.
+* Feature flags.
+* A/B testing infrastructure.
+* Notification infrastructure beyond basic needs.
 
-Bad:
+Build only what is specified. Build it correctly. Stop when the MVP is complete.
 
-```text
-+500 ContoCoins
-```
+---
 
-when no ledger transaction exists.
+# 16. Commit Strategy
 
-The UI must represent real system state.
+Keep commits small and focused.
+
+Each commit should represent one coherent change.
+
+Do not mix:
+
+* Feature work with refactors.
+* Bug fixes with new features.
+* Documentation updates with code changes.
+
+Commit messages should clearly describe what changed and why.
 
 ---
 
 # 17. Testing Strategy
 
-Every meaningful feature must include tests.
+Every meaningful feature should have tests.
 
 At minimum:
 
-* Happy path.
-* Validation failure.
-* Authorization failure.
-* Important edge cases.
+* Unit tests for business logic.
+* Integration tests for API routes.
+* End-to-end tests for critical flows.
+
+Tests must be included in the repository.
+
+Do not leave tests for later.
+
+---
+
+# 18. Security Reminder
+
+Security is not optional.
+
+Never trust the client.
+
+Always validate on the server.
+
+Never expose secrets.
+
+Never commit environment variables.
+
+Always use parameterized queries.
+
+Always validate input.
+
+Always handle errors safely.
+
+---
+
+# 19. Performance Considerations
+
+The MVP should be reasonably fast.
+
+Do not optimize prematurely.
+
+But do not ignore obvious inefficiencies.
 
 Use:
 
-* Vitest for unit/integration tests.
-* Playwright for critical user journeys.
-
-The initial critical E2E journeys are:
-
-```text
-Discover → View Venue → Save
-```
-
-```text
-Discover → Check Availability → Reserve → Confirm
-```
-
-```text
-Scan QR → Menu → Cart → Order
-```
+* Server-side rendering where appropriate.
+* Caching where appropriate.
+* Lazy loading where appropriate.
+* Pagination for collections.
 
 ---
 
-# 18. Validation Commands
+# 20. Deployment Readiness
 
-After meaningful implementation work, run the applicable project checks.
+The MVP should be deployable.
 
-At minimum:
+Ensure:
 
-```text
-pnpm lint
-pnpm typecheck
-pnpm test
-pnpm build
-```
-
-Run E2E tests when relevant:
-
-```text
-pnpm test:e2e
-```
-
-If a command does not exist, determine the correct project command from `package.json`.
-
-Do not invent commands blindly.
+* Environment variables are documented.
+* Build process works.
+* Start process works.
+* Database migrations work.
+* Seed data is available.
 
 ---
 
-# 19. Git Discipline
+# 21. Handoff Readiness
 
-Keep changes focused.
+When the MVP is complete, the codebase should be ready for:
 
-Do not mix:
+* Human review.
+* Extension by other developers.
+* Deployment.
+* Further development.
 
-* Feature work.
-* Unrelated refactoring.
-* Dependency upgrades.
-* Large formatting changes.
-
-A coherent task should produce a coherent change.
+The code should be clean, documented, tested, and consistent with the specifications.
 
 ---
 
-# 20. Documentation Discipline
+# 22. Summary
 
-If implementation changes documented behavior:
+Build Conto incrementally.
 
-Update the relevant specification.
+Follow the specifications.
 
-The code and the specifications must not intentionally diverge.
+Maintain quality.
 
----
+Preserve security.
 
-# 21. Decision Discipline
+Include tests.
 
-When a major decision is required:
+Document decisions.
 
-Do not silently introduce it.
-
-Examples:
-
-* New database.
-* New infrastructure.
-* New framework.
-* New authentication provider.
-* New AI provider.
-* New payment provider.
-* Major architecture change.
-
-Document the decision and explain:
-
-* Problem.
-* Decision.
-* Alternatives.
-* Reason.
-* Consequences.
+Stop when the MVP is complete.
 
 ---
 
-# 22. Completion Criteria
+# 23. Overall Constraint
 
-Do not declare a feature complete until:
+Everything in this document is subordinate to the product specification and the repository documentation.
 
-* It satisfies the relevant product requirement.
-* It fits the documented architecture.
-* Authorization is implemented where required.
-* Inputs are validated.
-* Relevant tests pass.
-* Type checking passes.
-* Linting passes.
-* The application builds.
-* The UI handles important states.
-* Security requirements are respected.
-* Documentation is updated when necessary.
+If this document conflicts with the product specification, the product specification wins.
 
 ---
 
-# 23. Working Style
+# 24. Final Instruction
 
-Be concise and technical.
-
-When beginning a non-trivial task:
-
-1. State what you found.
-2. State the implementation plan.
-3. Execute the plan.
-4. Report validation results.
-5. Report any remaining limitations.
-
-Do not provide long speculative explanations before inspecting the code.
+Build the MVP as specified. Build it correctly. Build it securely. Build it incrementally. Stop when complete.
 
 ---
 
-# 24. Conflict Resolution
+# 25. No Generality
 
-When specifications conflict:
+This document applies only to Conto.
 
-1. Identify the conflict.
-2. Prefer explicit requirements over assumptions.
-3. Prefer security over convenience.
-4. Prefer deterministic business rules over AI behavior.
-5. Prefer the simplest solution consistent with the product.
-6. Ask for a decision only when the conflict materially affects implementation.
-
-Never silently rewrite product requirements.
-
----
-
-# 25. Scope Control
-
-Do not implement future functionality just because it appears in the documentation.
-
-Clearly distinguish:
-
-* MVP.
-* Future.
-* Experimental.
-* Optional.
-
-The current task determines what should be implemented now.
+Do not reuse it for other projects without adaptation.
 
 ---
 
@@ -657,5 +490,3 @@ Then expand the system incrementally.
 Never lose sight of the core question:
 
 > Does this help the user discover, choose, visit, enjoy, or return to a place?
-
-```

@@ -1,0 +1,102 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Venue Category ──────────────────────────────────────────────────────────
+
+model VenueCategory {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String
+  icon        String?
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  venues Venue[]
+}
+
+// ─── Venue Tag ───────────────────────────────────────────────────────────────
+
+model VenueTag {
+  id   String @id @default(cuid())
+  name String
+  slug String @unique
+  type String?
+
+  venues VenueTagRelationship[]
+}
+
+// ─── Venue Tag Relationship (join table) ─────────────────────────────────────
+
+model VenueTagRelationship {
+  venueId String
+  tagId   String
+
+  venue Venue @relation(fields: [venueId], references: [id], onDelete: Cascade)
+  tag   VenueTag @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([venueId, tagId])
+}
+
+// ─── Business ────────────────────────────────────────────────────────────────
+
+model Business {
+  id          String   @id @default(cuid())
+  name        String
+  legalName   String?
+  description String
+  email       String
+  phone       String
+  website     String?
+  status      String   @default("active") // pending | active | suspended | inactive
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  venues Venue[]
+}
+
+// ─── Venue ───────────────────────────────────────────────────────────────────
+
+model Venue {
+  id           String   @id @default(cuid())
+  businessId   String
+  name         String
+  description  String
+  categoryId   String
+  address      String
+  city         String
+  latitude     Float
+  longitude    Float
+  priceLevel   Int      @default(2) // 1-4
+  openingHours Json?
+  phone        String?
+  status       String   @default("published") // draft | pending | published | temporarilyClosed | closed
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  business   Business           @relation(fields: [businessId], references: [id])
+  category   VenueCategory      @relation(fields: [categoryId], references: [id])
+  images     VenueImage[]
+  tags       VenueTagRelationship[]
+}
+
+// ─── Venue Image ─────────────────────────────────────────────────────────────
+
+model VenueImage {
+  id        String   @id @default(cuid())
+  venueId   String
+  url       String
+  altText   String?
+  sortOrder Int      @default(0)
+  isPrimary Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  venue Venue @relation(fields: [venueId], references: [id], onDelete: Cascade)
+}

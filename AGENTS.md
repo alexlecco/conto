@@ -14,16 +14,16 @@ Before implementing or modifying a feature, inspect the relevant documents in `d
 
 Primary documents:
 
-* `docs/00-vision.md`
-* `docs/01-product-spec.md`
-* `docs/02-user-flows.md`
-* `docs/03-data-model.md`
-* `docs/04-api-spec.md`
-* `docs/05-ui-ux-spec.md`
-* `docs/06-security-spec.md`
-* `docs/07-tech-stack.md`
-* `docs/08-ai-spec.md`
-* `docs/09-dev-workflow.md`
+- `docs/00-vision.md`
+- `docs/01-product-spec.md`
+- `docs/02-user-flows.md`
+- `docs/03-data-model.md`
+- `docs/04-api-spec.md`
+- `docs/05-ui-ux-spec.md`
+- `docs/06-security-spec.md`
+- `docs/07-tech-stack.md`
+- `docs/08-ai-spec.md`
+- `docs/09-dev-workflow.md`
 
 If `docs/10-master-prompt.md` exists, it defines the initial implementation mission and execution order.
 
@@ -51,19 +51,19 @@ Do not optimize for code volume.
 
 The MVP focuses on:
 
-* Venue discovery.
-* Search.
-* Filters.
-* Personalized discovery.
-* Venue details.
-* Saved venues.
-* Reservations.
-* Digital menus.
-* QR-based venue experiences.
-* Ordering where supported.
-* ContoCoins.
-* Rewards.
-* Basic business operations.
+- Venue discovery.
+- Search.
+- Filters.
+- Personalized discovery.
+- Venue details.
+- Saved venues.
+- Reservations.
+- Digital menus.
+- QR-based venue experiences.
+- Ordering where supported.
+- ContoCoins.
+- Rewards.
+- Basic business operations.
 
 Payments are not part of the initial MVP unless explicitly added to the specification.
 
@@ -75,21 +75,21 @@ Use the technology decisions documented in `docs/07-tech-stack.md`.
 
 Current target stack:
 
-* TypeScript.
-* Node.js.
-* pnpm.
-* Next.js.
-* React.
-* Tailwind CSS.
-* shadcn/ui-style application-owned components.
-* PostgreSQL.
-* Prisma.
-* Zod.
-* React Hook Form where appropriate.
-* Vitest.
-* Playwright.
-* ESLint.
-* Prettier.
+- TypeScript.
+- Node.js.
+- pnpm.
+- Next.js.
+- React.
+- Tailwind CSS.
+- shadcn/ui-style application-owned components.
+- PostgreSQL.
+- Prisma.
+- Zod.
+- React Hook Form where appropriate.
+- Vitest.
+- Playwright.
+- ESLint.
+- Prettier.
 
 Do not introduce alternative frameworks or major infrastructure without an explicit architectural reason.
 
@@ -121,23 +121,23 @@ Security requirements are mandatory.
 
 Never trust client-provided:
 
-* Permissions.
-* Prices.
-* Totals.
-* Reservation availability.
-* ContoCoin balances.
-* Reward eligibility.
-* Business ownership.
+- Permissions.
+- Prices.
+- Totals.
+- Reservation availability.
+- ContoCoin balances.
+- Reward eligibility.
+- Business ownership.
 
 All critical operations must be validated server-side.
 
 Never expose:
 
-* Secrets.
-* API keys.
-* Authentication credentials.
-* Private user data.
-* Private business data.
+- Secrets.
+- API keys.
+- Authentication credentials.
+- Private user data.
+- Private business data.
 
 Never commit secrets.
 
@@ -149,13 +149,13 @@ AI is an assistant, not the source of truth.
 
 AI must never independently control:
 
-* Authorization.
-* Reservation availability.
-* Order totals.
-* ContoCoins.
-* Rewards.
-* Payments.
-* Security decisions.
+- Authorization.
+- Reservation availability.
+- Order totals.
+- ContoCoins.
+- Rewards.
+- Payments.
+- Security decisions.
 
 AI-generated structured data must be validated before use.
 
@@ -185,12 +185,12 @@ Do not add features merely because they seem useful.
 
 Do not silently introduce:
 
-* New databases.
-* New frameworks.
-* New authentication systems.
-* New state-management libraries.
-* New infrastructure.
-* New AI providers.
+- New databases.
+- New frameworks.
+- New authentication systems.
+- New state-management libraries.
+- New infrastructure.
+- New AI providers.
 
 Without an explicit reason.
 
@@ -210,12 +210,12 @@ The actual repository state is authoritative for implementation details.
 
 Before adding a dependency, determine:
 
-* Whether it is necessary.
-* Whether the existing stack can solve the problem.
-* Whether it is maintained.
-* Whether it introduces security or licensing concerns.
-* Whether it increases complexity.
-* Whether it creates vendor lock-in.
+- Whether it is necessary.
+- Whether the existing stack can solve the problem.
+- Whether it is maintained.
+- Whether it introduces security or licensing concerns.
+- Whether it increases complexity.
+- Whether it creates vendor lock-in.
 
 Prefer the smallest dependency footprint possible.
 
@@ -239,16 +239,16 @@ Every meaningful business feature should include automated tests.
 
 At minimum consider:
 
-* Happy path.
-* Invalid input.
-* Unauthorized access.
-* Important edge cases.
-* Failure states.
+- Happy path.
+- Invalid input.
+- Unauthorized access.
+- Important edge cases.
+- Failure states.
 
 Use:
 
-* Vitest for unit/integration testing.
-* Playwright for critical end-to-end journeys.
+- Vitest for unit/integration testing.
+- Playwright for critical end-to-end journeys.
 
 ---
 
@@ -256,21 +256,21 @@ Use:
 
 UI must be:
 
-* Mobile-first.
-* Responsive.
-* Accessible.
-* Fast.
-* Consistent.
-* Simple.
+- Mobile-first.
+- Responsive.
+- Accessible.
+- Fast.
+- Consistent.
+- Simple.
 
 Important screens must account for:
 
-* Loading.
-* Empty.
-* Error.
-* Disabled.
-* Unauthorized.
-* Success states.
+- Loading.
+- Empty.
+- Error.
+- Disabled.
+- Unauthorized.
+- Success states.
 
 ---
 
@@ -282,10 +282,10 @@ Documentation must not intentionally drift from the implementation.
 
 When a specification conflict is discovered:
 
-* Do not silently choose an interpretation.
-* Identify the conflict.
-* Prefer the higher-priority requirement.
-* Ask for a decision when the conflict materially affects implementation.
+- Do not silently choose an interpretation.
+- Identify the conflict.
+- Prefer the higher-priority requirement.
+- Ask for a decision when the conflict materially affects implementation.
 
 ---
 
@@ -305,14 +305,14 @@ Never commit secrets.
 
 A feature is not complete until:
 
-* The requirement is implemented.
-* Security requirements are satisfied.
-* Relevant validation exists.
-* Relevant tests exist.
-* Type checking passes.
-* Linting passes.
-* The application builds.
-* Relevant documentation is updated.
+- The requirement is implemented.
+- Security requirements are satisfied.
+- Relevant validation exists.
+- Relevant tests exist.
+- Type checking passes.
+- Linting passes.
+- The application builds.
+- Relevant documentation is updated.
 
 ---
 

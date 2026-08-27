@@ -1,8 +1,3 @@
-`09-dev-workflow.md`
-
-Este es especialmente importante porque va a decirle a **OpenCode cómo trabajar dentro del proyecto**, cómo leer los specs, cómo avanzar por etapas, cómo probar lo que hace y qué cosas tiene prohibido inventar o cambiar por su cuenta.
-
-````md
 # Conto — Development Workflow Specification
 
 **Document status:** Draft
@@ -53,7 +48,7 @@ docs/
 ├── 08-ai-spec.md
 ├── 09-dev-workflow.md
 └── 10-master-prompt.md
-````
+```
 
 The implementation must remain consistent with these documents.
 
@@ -87,12 +82,12 @@ OpenCode is an AI-assisted development agent.
 
 OpenCode should act as:
 
-* Software engineer.
-* Code reviewer.
-* Test writer.
-* Debugging assistant.
-* Refactoring assistant.
-* Documentation assistant.
+- Software engineer.
+- Code reviewer.
+- Test writer.
+- Debugging assistant.
+- Refactoring assistant.
+- Documentation assistant.
 
 OpenCode must not act as an unrestricted autonomous decision-maker.
 
@@ -156,11 +151,11 @@ Before modifying a feature, OpenCode must inspect the existing implementation.
 
 It must not assume that:
 
-* A file exists.
-* A function exists.
-* A dependency exists.
-* A database model exists.
-* An API route exists.
+- A file exists.
+- A function exists.
+- A dependency exists.
+- A database model exists.
+- An API route exists.
 
 The actual repository state is authoritative for implementation details.
 
@@ -174,11 +169,11 @@ When implementing a feature:
 
 Avoid unrelated:
 
-* Refactors.
-* Renames.
-* Dependency changes.
-* Architecture changes.
-* Formatting changes.
+- Refactors.
+- Renames.
+- Dependency changes.
+- Architecture changes.
+- Formatting changes.
 
 unless they are necessary.
 
@@ -194,11 +189,11 @@ If the requested feature is:
 
 Do not automatically implement:
 
-* Social sharing.
-* Reviews.
-* Notifications.
-* Recommendations.
-* Gamification.
+- Social sharing.
+- Reviews.
+- Notifications.
+- Recommendations.
+- Gamification.
 
 Those belong to separate requirements.
 
@@ -216,12 +211,12 @@ However, if the specifications already provide a clear answer, OpenCode should p
 
 OpenCode must not invent:
 
-* Business rules.
-* API behavior.
-* Database fields.
-* User roles.
-* Security exceptions.
-* AI behavior.
+- Business rules.
+- API behavior.
+- Database fields.
+- User roles.
+- Security exceptions.
+- AI behavior.
 
 If a required detail is missing, it should identify the missing decision rather than silently inventing one.
 
@@ -258,12 +253,12 @@ Major dependencies should not be introduced silently.
 
 Examples:
 
-* New database.
-* New framework.
-* New state-management library.
-* New infrastructure system.
-* New AI provider.
-* New queue system.
+- New database.
+- New framework.
+- New state-management library.
+- New infrastructure system.
+- New AI provider.
+- New queue system.
 
 These require an explicit architectural decision.
 
@@ -276,18 +271,18 @@ TypeScript strict mode should remain enabled.
 Avoid:
 
 ```ts
-any
+any;
 ```
 
 unless there is a documented reason.
 
 Prefer:
 
-* Explicit types.
-* Type inference where safe.
-* Zod schemas at runtime boundaries.
-* Narrow types.
-* Discriminated unions where useful.
+- Explicit types.
+- Type inference where safe.
+- Zod schemas at runtime boundaries.
+- Narrow types.
+- Discriminated unions where useful.
 
 ---
 
@@ -297,16 +292,16 @@ Errors should be handled intentionally.
 
 Do not:
 
-* Swallow exceptions.
-* Ignore failed promises.
-* Return misleading success responses.
-* Expose internal stack traces.
+- Swallow exceptions.
+- Ignore failed promises.
+- Return misleading success responses.
+- Expose internal stack traces.
 
 Errors should either be:
 
-* Handled.
-* Propagated appropriately.
-* Logged where useful.
+- Handled.
+- Propagated appropriately.
+- Logged where useful.
 
 ---
 
@@ -372,11 +367,11 @@ Never modify production schema manually as the normal development workflow.
 
 Migrations should:
 
-* Be deterministic.
-* Be version-controlled.
-* Be tested.
-* Avoid unnecessary destructive operations.
-* Consider existing production data.
+- Be deterministic.
+- Be version-controlled.
+- Be tested.
+- Avoid unnecessary destructive operations.
+- Consider existing production data.
 
 Destructive migrations require explicit consideration.
 
@@ -434,11 +429,11 @@ Every meaningful business feature should have automated tests.
 
 At minimum, test:
 
-* Happy path.
-* Invalid input.
-* Unauthorized access.
-* Important edge cases.
-* Failure conditions.
+- Happy path.
+- Invalid input.
+- Unauthorized access.
+- Important edge cases.
+- Failure conditions.
 
 ---
 
@@ -446,18 +441,18 @@ At minimum, test:
 
 Unit tests should focus on:
 
-* Business rules.
-* Pure functions.
-* Validation.
-* Calculations.
-* State transitions.
+- Business rules.
+- Pure functions.
+- Validation.
+- Calculations.
+- State transitions.
 
 Examples:
 
-* Reservation eligibility.
-* ContoCoin calculations.
-* Reward eligibility.
-* Order total calculation.
+- Reservation eligibility.
+- ContoCoin calculations.
+- Reward eligibility.
+- Order total calculation.
 
 ---
 
@@ -465,11 +460,11 @@ Examples:
 
 Integration tests should verify:
 
-* API behavior.
-* Database interaction.
-* Authorization.
-* Business services.
-* Important workflows.
+- API behavior.
+- Database interaction.
+- Authorization.
+- Business services.
+- Important workflows.
 
 ---
 
@@ -527,9 +522,9 @@ Tests should use controlled test data.
 
 Tests must not depend on:
 
-* Production data.
-* External APIs unless explicitly testing an integration.
-* Unstable external services.
+- Production data.
+- External APIs unless explicitly testing an integration.
+- Unstable external services.
 
 ---
 
@@ -557,10 +552,10 @@ When OpenCode uses AI capabilities to assist development:
 
 The model should receive:
 
-* Relevant specifications.
-* Relevant code.
-* Relevant tests.
-* Explicit task requirements.
+- Relevant specifications.
+- Relevant code.
+- Relevant tests.
+- Explicit task requirements.
 
 Do not provide unnecessary unrelated context.
 
@@ -570,10 +565,10 @@ Do not provide unnecessary unrelated context.
 
 AI-generated code must be reviewed through:
 
-* Type checking.
-* Linting.
-* Tests.
-* Security review where relevant.
+- Type checking.
+- Linting.
+- Tests.
+- Security review where relevant.
 
 AI-generated code is not considered correct merely because it compiles.
 
@@ -585,10 +580,10 @@ OpenCode must not assume APIs or libraries exist.
 
 Before using an unfamiliar dependency or API:
 
-* Verify it exists.
-* Verify the installed version.
-* Verify the documented API.
-* Inspect the existing project when possible.
+- Verify it exists.
+- Verify the installed version.
+- Verify the documented API.
+- Inspect the existing project when possible.
 
 ---
 
@@ -628,9 +623,9 @@ Mocks must not accidentally become production behavior.
 
 Production code should clearly distinguish:
 
-* Real implementation.
-* Test implementation.
-* Development fixtures.
+- Real implementation.
+- Test implementation.
+- Development fixtures.
 
 ---
 
@@ -646,11 +641,11 @@ Never use production credentials for local development unless explicitly require
 
 OpenCode must never:
 
-* Print secrets.
-* Commit secrets.
-* Hard-code API keys.
-* Include credentials in test fixtures.
-* Put secrets into documentation.
+- Print secrets.
+- Commit secrets.
+- Hard-code API keys.
+- Include credentials in test fixtures.
+- Put secrets into documentation.
 
 Use environment variables or secure secret management.
 
@@ -701,11 +696,11 @@ A lightweight workflow is preferred over complex GitFlow unless the team grows e
 
 When pull requests are used, they should contain:
 
-* What changed.
-* Why it changed.
-* Tests performed.
-* Known limitations.
-* Screenshots for significant UI changes where useful.
+- What changed.
+- Why it changed.
+- Tests performed.
+- Known limitations.
+- Screenshots for significant UI changes where useful.
 
 ---
 
@@ -713,12 +708,12 @@ When pull requests are used, they should contain:
 
 Code review should focus on:
 
-* Correctness.
-* Security.
-* Architecture.
-* Maintainability.
-* Tests.
-* User impact.
+- Correctness.
+- Security.
+- Architecture.
+- Maintainability.
+- Tests.
+- User impact.
 
 Reviewers should not focus exclusively on formatting.
 
@@ -754,13 +749,13 @@ A screen is not considered complete if only the happy state works.
 
 Important screens should consider:
 
-* Loading.
-* Success.
-* Empty.
-* Error.
-* Disabled.
-* Unauthorized.
-* Offline/degraded state where relevant.
+- Loading.
+- Success.
+- Empty.
+- Error.
+- Disabled.
+- Unauthorized.
+- Offline/degraded state where relevant.
 
 ---
 
@@ -770,13 +765,13 @@ Accessibility should be tested during implementation.
 
 Check:
 
-* Keyboard navigation.
-* Focus behavior.
-* Labels.
-* Semantic structure.
-* Contrast.
-* Screen-reader behavior.
-* Touch target size.
+- Keyboard navigation.
+- Focus behavior.
+- Labels.
+- Semantic structure.
+- Contrast.
+- Screen-reader behavior.
+- Touch target size.
 
 ---
 
@@ -784,10 +779,10 @@ Check:
 
 Every major UI component should be evaluated at:
 
-* Small mobile.
-* Large mobile.
-* Tablet.
-* Desktop.
+- Small mobile.
+- Large mobile.
+- Tablet.
+- Desktop.
 
 Do not wait until the end of the project to discover responsive problems.
 
@@ -799,11 +794,11 @@ Performance should be considered during implementation.
 
 Avoid:
 
-* Unnecessary client-side rendering.
-* Large bundles.
-* Unoptimized images.
-* Excessive API calls.
-* Repeated database queries.
+- Unnecessary client-side rendering.
+- Large bundles.
+- Unoptimized images.
+- Excessive API calls.
+- Repeated database queries.
 
 Measure before introducing complex optimization systems.
 
@@ -813,18 +808,18 @@ Measure before introducing complex optimization systems.
 
 A security review is required when modifying:
 
-* Authentication.
-* Authorization.
-* User data.
-* Business permissions.
-* Orders.
-* Reservations.
-* ContoCoins.
-* Rewards.
-* Payments.
-* File uploads.
-* AI tools.
-* External integrations.
+- Authentication.
+- Authorization.
+- User data.
+- Business permissions.
+- Orders.
+- Reservations.
+- ContoCoins.
+- Rewards.
+- Payments.
+- File uploads.
+- AI tools.
+- External integrations.
 
 ---
 
@@ -871,10 +866,10 @@ Do not silently accumulate known problems.
 
 When intentionally taking a shortcut, document:
 
-* What was simplified.
-* Why.
-* What would be needed later.
-* Whether it affects security or correctness.
+- What was simplified.
+- Why.
+- What would be needed later.
+- Whether it affects security or correctness.
 
 ---
 
@@ -912,11 +907,11 @@ Do not create abstractions for hypothetical future requirements.
 
 Create abstractions when:
 
-* Duplication exists.
-* Multiple implementations exist.
-* A boundary is genuinely useful.
-* Testing requires isolation.
-* Vendor lock-in needs to be contained.
+- Duplication exists.
+- Multiple implementations exist.
+- A boundary is genuinely useful.
+- Testing requires isolation.
+- Vendor lock-in needs to be contained.
 
 ---
 
@@ -924,9 +919,9 @@ Create abstractions when:
 
 Feature flags may be introduced for:
 
-* Experimental AI features.
-* Gradual rollouts.
-* Risky changes.
+- Experimental AI features.
+- Gradual rollouts.
+- Risky changes.
 
 Do not create a feature-flag system unnecessarily early.
 
@@ -962,11 +957,11 @@ The exact pipeline may evolve.
 
 Never deploy code that:
 
-* Does not build.
-* Has failing critical tests.
-* Contains known exposed secrets.
-* Breaks database migrations.
-* Bypasses authorization.
+- Does not build.
+- Has failing critical tests.
+- Contains known exposed secrets.
+- Breaks database migrations.
+- Bypasses authorization.
 
 ---
 
@@ -984,10 +979,10 @@ Database migrations should be designed carefully because some changes cannot be 
 
 Production should provide enough information to determine:
 
-* What failed.
-* Where it failed.
-* When it failed.
-* Which operation was affected.
+- What failed.
+- Where it failed.
+- When it failed.
+- Which operation was affected.
 
 Do not solve every operational problem with more logging.
 
@@ -1020,17 +1015,17 @@ The exact command names may follow the selected tooling conventions.
 
 A feature is considered complete when:
 
-* Requirements are implemented.
-* Architecture is respected.
-* Authorization is implemented.
-* Validation exists.
-* Critical business logic is tested.
-* UI states are handled.
-* Accessibility is considered.
-* Type checking passes.
-* Linting passes.
-* Relevant tests pass.
-* Documentation is updated where necessary.
+- Requirements are implemented.
+- Architecture is respected.
+- Authorization is implemented.
+- Validation exists.
+- Critical business logic is tested.
+- UI states are handled.
+- Accessibility is considered.
+- Type checking passes.
+- Linting passes.
+- Relevant tests pass.
+- Documentation is updated where necessary.
 
 ---
 
@@ -1059,13 +1054,13 @@ Before declaring a task complete, OpenCode should verify:
 
 OpenCode should stop rather than guessing when:
 
-* A security requirement is ambiguous.
-* A destructive database change is required.
-* A major architectural decision is needed.
-* A specification conflict is discovered.
-* Required credentials are missing.
-* A critical external dependency is unavailable.
-* A requested implementation contradicts the product specification.
+- A security requirement is ambiguous.
+- A destructive database change is required.
+- A major architectural decision is needed.
+- A specification conflict is discovered.
+- Required credentials are missing.
+- A critical external dependency is unavailable.
+- A requested implementation contradicts the product specification.
 
 ---
 
@@ -1073,11 +1068,11 @@ OpenCode should stop rather than guessing when:
 
 OpenCode may proceed without asking for confirmation when:
 
-* The specification is clear.
-* The change is local.
-* Existing architecture provides an obvious solution.
-* The implementation does not introduce significant risk.
-* Tests can validate the behavior.
+- The specification is clear.
+- The change is local.
+- Existing architecture provides an obvious solution.
+- The implementation does not introduce significant risk.
+- Tests can validate the behavior.
 
 ---
 
@@ -1152,6 +1147,3 @@ The specification defines what Conto should be.
 The code implements it.
 
 The tests prove it.
-
-```
-```

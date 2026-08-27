@@ -1,7 +1,3 @@
-`04-api-spec.md`
-
-Este va a definir **cómo se comunican el frontend, el backend y los distintos servicios de Conto**. Es importante antes de meternos de lleno con el stack, porque nos permite separar claramente qué necesita hacer el sistema de cómo lo vamos a implementar.
-
 # Conto — API Specification
 
 **Document status:** Draft
@@ -15,15 +11,15 @@ Este va a definir **cómo se comunican el frontend, el backend y los distintos s
 
 The Conto API should be:
 
-* Simple.
-* Predictable.
-* Secure.
-* Modular.
-* Easy to consume from the frontend.
-* Easy to evolve.
-* Explicit about permissions.
-* Consistent in error handling.
-* Designed around product capabilities rather than database tables.
+- Simple.
+- Predictable.
+- Secure.
+- Modular.
+- Easy to consume from the frontend.
+- Easy to evolve.
+- Explicit about permissions.
+- Consistent in error handling.
+- Designed around product capabilities rather than database tables.
 
 The API should not expose internal implementation details unnecessarily.
 
@@ -49,12 +45,12 @@ The frontend should not directly implement business-critical logic.
 
 Operations involving:
 
-* Reservations.
-* Orders.
-* ContoCoins.
-* Rewards.
-* Permissions.
-* Business administration.
+- Reservations.
+- Orders.
+- ContoCoins.
+- Rewards.
+- Permissions.
+- Business administration.
 
 must be validated by the backend.
 
@@ -68,34 +64,34 @@ The API should support authenticated and unauthenticated requests.
 
 Examples:
 
-* Discover venues.
-* Search venues.
-* View venue details.
-* View menus.
-* View public promotions.
+- Discover venues.
+- Search venues.
+- View venue details.
+- View menus.
+- View public promotions.
 
 ## Authenticated operations
 
 Examples:
 
-* Save venue.
-* Manage preferences.
-* Create reservation.
-* View reservations.
-* View orders.
-* View rewards.
-* Manage ContoCoins.
+- Save venue.
+- Manage preferences.
+- Create reservation.
+- View reservations.
+- View orders.
+- View rewards.
+- Manage ContoCoins.
 
 ## Business-authenticated operations
 
 Examples:
 
-* Manage venue.
-* Manage menu.
-* Manage reservations.
-* Manage orders.
-* Create promotions.
-* View analytics.
+- Manage venue.
+- Manage menu.
+- Manage reservations.
+- Manage orders.
+- Create promotions.
+- View analytics.
 
 ---
 
@@ -164,9 +160,9 @@ Example:
 
 Errors should include:
 
-* Stable machine-readable code.
-* Human-readable message.
-* Optional metadata when useful.
+- Stable machine-readable code.
+- Human-readable message.
+- Optional metadata when useful.
 
 The frontend should not need to parse arbitrary backend messages.
 
@@ -176,18 +172,18 @@ The frontend should not need to parse arbitrary backend messages.
 
 Potential error codes include:
 
-* `UNAUTHORIZED`
-* `FORBIDDEN`
-* `NOT_FOUND`
-* `VALIDATION_ERROR`
-* `CONFLICT`
-* `RATE_LIMITED`
-* `RESERVATION_UNAVAILABLE`
-* `ORDER_UNAVAILABLE`
-* `ITEM_UNAVAILABLE`
-* `INVALID_QR`
-* `REWARD_UNAVAILABLE`
-* `INTERNAL_ERROR`
+- `UNAUTHORIZED`
+- `FORBIDDEN`
+- `NOT_FOUND`
+- `VALIDATION_ERROR`
+- `CONFLICT`
+- `RATE_LIMITED`
+- `RESERVATION_UNAVAILABLE`
+- `ORDER_UNAVAILABLE`
+- `ITEM_UNAVAILABLE`
+- `INVALID_QR`
+- `REWARD_UNAVAILABLE`
+- `INTERNAL_ERROR`
 
 ---
 
@@ -201,17 +197,17 @@ Conceptual endpoint:
 
 Possible query parameters:
 
-* `category`
-* `search`
-* `latitude`
-* `longitude`
-* `radius`
-* `priceLevel`
-* `tags`
-* `openNow`
-* `available`
-* `limit`
-* `cursor`
+- `category`
+- `search`
+- `latitude`
+- `longitude`
+- `radius`
+- `priceLevel`
+- `tags`
+- `openNow`
+- `available`
+- `limit`
+- `cursor`
 
 The endpoint should support pagination.
 
@@ -225,12 +221,12 @@ Conceptual endpoint:
 
 Possible parameters:
 
-* `query`
-* `category`
-* `location`
-* `filters`
-* `limit`
-* `cursor`
+- `query`
+- `category`
+- `location`
+- `filters`
+- `limit`
+- `cursor`
 
 Search behavior should prioritize useful results over exact text matching alone.
 
@@ -244,15 +240,15 @@ Conceptual endpoint:
 
 Response may include:
 
-* Basic venue information.
-* Images.
-* Category.
-* Tags.
-* Opening hours.
-* Location.
-* Menu availability.
-* Reservation availability.
-* Relevant promotions.
+- Basic venue information.
+- Images.
+- Category.
+- Tags.
+- Opening hours.
+- Location.
+- Menu availability.
+- Reservation availability.
+- Relevant promotions.
 
 The API should avoid returning unnecessary internal information.
 
@@ -266,18 +262,18 @@ Conceptual endpoint:
 
 Possible parameters:
 
-* `location`
-* `limit`
-* `context`
+- `location`
+- `limit`
+- `context`
 
 Possible context values:
 
-* `home`
-* `nearby`
-* `night`
-* `food`
-* `coffee`
-* `drinks`
+- `home`
+- `nearby`
+- `night`
+- `food`
+- `coffee`
+- `drinks`
 
 The recommendation engine may initially be rules-based.
 
@@ -300,9 +296,9 @@ Possible payload:
 
 Possible feedback:
 
-* `more_like_this`
-* `less_like_this`
-* `not_interested`
+- `more_like_this`
+- `less_like_this`
+- `not_interested`
 
 This endpoint may be implemented after the core MVP.
 
@@ -320,9 +316,9 @@ This endpoint may be implemented after the core MVP.
 
 Possible fields:
 
-* `displayName`
-* `avatarUrl`
-* `phoneNumber`
+- `displayName`
+- `avatarUrl`
+- `phoneNumber`
 
 ---
 
@@ -338,13 +334,13 @@ Possible fields:
 
 Possible fields:
 
-* `energyPreference`
-* `socialPreference`
-* `planningPreference`
-* `explorationPreference`
-* `preferredCategories`
-* `preferredAtmospheres`
-* `preferredPriceLevels`
+- `energyPreference`
+- `socialPreference`
+- `planningPreference`
+- `explorationPreference`
+- `preferredCategories`
+- `preferredAtmospheres`
+- `preferredPriceLevels`
 
 ---
 
@@ -384,14 +380,14 @@ A venue should not be saved twice by the same user.
 
 Possible parameters:
 
-* `date`
-* `partySize`
+- `date`
+- `partySize`
 
 Response:
 
-* Available times.
-* Availability status.
-* Optional capacity information.
+- Available times.
+- Availability status.
+- Optional capacity information.
 
 ---
 
@@ -422,9 +418,9 @@ The frontend must never assume that a displayed slot remains available.
 
 Possible filters:
 
-* `upcoming`
-* `past`
-* `cancelled`
+- `upcoming`
+- `past`
+- `cancelled`
 
 ---
 
@@ -434,12 +430,12 @@ Possible filters:
 
 The response should include:
 
-* Venue.
-* Date.
-* Time.
-* Party size.
-* Status.
-* Relevant instructions.
+- Venue.
+- Date.
+- Time.
+- Party size.
+- Status.
+- Relevant instructions.
 
 ---
 
@@ -449,9 +445,9 @@ The response should include:
 
 The backend should verify:
 
-* Reservation ownership.
-* Current status.
-* Cancellation rules.
+- Reservation ownership.
+- Current status.
+- Cancellation rules.
 
 ---
 
@@ -463,9 +459,9 @@ Business users may access:
 
 Possible filters:
 
-* Date.
-* Status.
-* Venue.
+- Date.
+- Status.
+- Venue.
 
 ---
 
@@ -491,11 +487,11 @@ The API must verify that the reservation belongs to a venue managed by the authe
 
 Response should include:
 
-* Menus.
-* Categories.
-* Items.
-* Modifiers.
-* Availability.
+- Menus.
+- Categories.
+- Items.
+- Modifiers.
+- Availability.
 
 ---
 
@@ -586,13 +582,13 @@ The client must never be trusted to calculate the final order total.
 
 The response should include:
 
-* Items.
-* Quantities.
-* Status.
-* Total.
-* Venue.
-* Table context where applicable.
-* Timestamps.
+- Items.
+- Quantities.
+- Status.
+- Total.
+- Venue.
+- Table context where applicable.
+- Timestamps.
 
 ---
 
@@ -602,9 +598,9 @@ The response should include:
 
 Possible filters:
 
-* `active`
-* `past`
-* `cancelled`
+- `active`
+- `past`
+- `cancelled`
 
 ---
 
@@ -616,9 +612,9 @@ Business users may access:
 
 Possible filters:
 
-* Venue.
-* Status.
-* Date.
+- Venue.
+- Status.
+- Date.
 
 ---
 
@@ -664,10 +660,10 @@ The balance should be derived from authoritative transaction data or a securely 
 
 Possible filters:
 
-* `earned`
-* `spent`
-* `bonus`
-* `adjustment`
+- `earned`
+- `spent`
+- `bonus`
+- `adjustment`
 
 ---
 
@@ -693,10 +689,10 @@ The system should prevent users from arbitrarily awarding themselves coins.
 
 Possible filters:
 
-* Venue.
-* Category.
-* Cost.
-* Availability.
+- Venue.
+- Category.
+- Cost.
+- Availability.
 
 ## Get User Rewards
 
@@ -710,11 +706,11 @@ Possible filters:
 
 The backend must validate:
 
-* User authentication.
-* Reward availability.
-* Coin balance.
-* Expiration.
-* Usage limits.
+- User authentication.
+- Reward availability.
+- Coin balance.
+- Expiration.
+- Usage limits.
 
 The redemption and coin deduction should be handled atomically where possible.
 
@@ -728,9 +724,9 @@ The redemption and coin deduction should be handled atomically where possible.
 
 Possible filters:
 
-* Venue.
-* Category.
-* Active status.
+- Venue.
+- Category.
+- Active status.
 
 Business users may create promotions through:
 
@@ -790,19 +786,19 @@ Business analytics may eventually expose:
 
 Possible parameters:
 
-* `startDate`
-* `endDate`
-* `venueId`
+- `startDate`
+- `endDate`
+- `venueId`
 
 Possible metrics:
 
-* Views.
-* Saves.
-* Reservations.
-* Orders.
-* QR scans.
-* Repeat customers.
-* Promotion usage.
+- Views.
+- Saves.
+- Reservations.
+- Orders.
+- QR scans.
+- Repeat customers.
+- Promotion usage.
 
 Analytics should not expose unnecessary personal information.
 
@@ -860,12 +856,12 @@ The backend should validate allowed filters.
 
 Where useful, collections may support:
 
-* Relevance.
-* Distance.
-* Popularity.
-* Newest.
-* Price.
-* Availability.
+- Relevance.
+- Distance.
+- Popularity.
+- Newest.
+- Price.
+- Availability.
 
 Recommendation results should normally default to relevance.
 
@@ -879,11 +875,11 @@ Higher-risk endpoints should receive stricter controls.
 
 Examples:
 
-* Authentication.
-* Reservation creation.
-* Order creation.
-* Reward redemption.
-* Coin operations.
+- Authentication.
+- Reservation creation.
+- Order creation.
+- Reward redemption.
+- Coin operations.
 
 ---
 
@@ -893,10 +889,10 @@ Critical mutation endpoints should support idempotency where appropriate.
 
 Especially:
 
-* Reservation creation.
-* Order creation.
-* Reward redemption.
-* Payment operations when introduced.
+- Reservation creation.
+- Order creation.
+- Reward redemption.
+- Payment operations when introduced.
 
 This helps prevent duplicate operations caused by network retries.
 
@@ -908,14 +904,14 @@ The backend must validate all important business rules.
 
 Examples:
 
-* Reservation availability.
-* Party size.
-* Venue status.
-* Menu item availability.
-* Prices.
-* Reward eligibility.
-* Coin balance.
-* Business permissions.
+- Reservation availability.
+- Party size.
+- Venue status.
+- Menu item availability.
+- Prices.
+- Reward eligibility.
+- Coin balance.
+- Business permissions.
 
 Client-side validation is for UX only.
 
@@ -949,23 +945,23 @@ The backend should eventually support internal events.
 
 Examples:
 
-* `reservation.created`
-* `reservation.confirmed`
-* `reservation.completed`
-* `order.created`
-* `order.completed`
-* `venue.viewed`
-* `venue.saved`
-* `reward.redeemed`
-* `contocoin.earned`
+- `reservation.created`
+- `reservation.confirmed`
+- `reservation.completed`
+- `order.created`
+- `order.completed`
+- `venue.viewed`
+- `venue.saved`
+- `reward.redeemed`
+- `contocoin.earned`
 
 Events can later feed:
 
-* Analytics.
-* Notifications.
-* Recommendations.
-* Loyalty.
-* AI systems.
+- Analytics.
+- Notifications.
+- Recommendations.
+- Loyalty.
+- AI systems.
 
 The MVP may implement only the events that are immediately useful.
 
@@ -987,16 +983,16 @@ Breaking changes should result in a new API version rather than silently changin
 
 The API must:
 
-* Authenticate protected requests.
-* Authorize every protected resource.
-* Validate all inputs.
-* Avoid trusting client-provided prices.
-* Avoid exposing private business data.
-* Avoid exposing private user data.
-* Protect secrets.
-* Rate-limit sensitive operations.
-* Log security-relevant events.
-* Prevent unauthorized mutation of reservations and orders.
+- Authenticate protected requests.
+- Authorize every protected resource.
+- Validate all inputs.
+- Avoid trusting client-provided prices.
+- Avoid exposing private business data.
+- Avoid exposing private user data.
+- Protect secrets.
+- Rate-limit sensitive operations.
+- Log security-relevant events.
+- Prevent unauthorized mutation of reservations and orders.
 
 ---
 
@@ -1006,12 +1002,12 @@ Important API operations should produce structured logs.
 
 Logs should help answer:
 
-* What happened?
-* When did it happen?
-* Which operation failed?
-* Which service failed?
-* Was the request authenticated?
-* What was the request correlation ID?
+- What happened?
+- When did it happen?
+- Which operation failed?
+- Which service failed?
+- Was the request authenticated?
+- What was the request correlation ID?
 
 Logs must avoid exposing sensitive personal information unnecessarily.
 
@@ -1031,40 +1027,40 @@ The API documentation should remain synchronized with the implementation.
 
 ### Priority 1
 
-* Authentication.
-* Venues.
-* Search.
-* Recommendations.
-* Venue details.
-* User preferences.
-* Saved venues.
+- Authentication.
+- Venues.
+- Search.
+- Recommendations.
+- Venue details.
+- User preferences.
+- Saved venues.
 
 ### Priority 2
 
-* Reservation availability.
-* Reservations.
-* Business reservations.
+- Reservation availability.
+- Reservations.
+- Business reservations.
 
 ### Priority 3
 
-* Menus.
-* QR.
-* Orders.
-* Business menu management.
-* Business order management.
+- Menus.
+- QR.
+- Orders.
+- Business menu management.
+- Business order management.
 
 ### Priority 4
 
-* ContoCoins.
-* Rewards.
-* Promotions.
-* Notifications.
+- ContoCoins.
+- Rewards.
+- Promotions.
+- Notifications.
 
 ### Priority 5
 
-* Advanced analytics.
-* Recommendation feedback.
-* Advanced personalization.
+- Advanced analytics.
+- Recommendation feedback.
+- Advanced personalization.
 
 ---
 
@@ -1092,17 +1088,17 @@ This document defines **what the API needs to provide**.
 
 It intentionally does not make the final decisions about:
 
-* Framework.
-* Database.
-* Hosting.
-* Authentication provider.
-* AI model.
-* Cloud provider.
-* Programming language.
+- Framework.
+- Database.
+- Hosting.
+- Authentication provider.
+- AI model.
+- Cloud provider.
+- Programming language.
 
 Those decisions belong in:
 
-`08-tech-stack.md`
+`07-tech-stack.md`
 
 ---
 
