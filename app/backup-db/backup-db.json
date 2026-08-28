@@ -1,347 +1,416 @@
 {
-  "restaurant": {
-    "id": "quates",
-    "name": "Quates",
-    "description": "Cantina Mexicana al Paso",
-    "menu": {
-      "currency": null,
-      "categories": [
-        {
-          "id": "nachos",
-          "name": "Nachos",
-          "items": [
-            {
-              "id": "nachos-clasicos",
-              "name": "Clásicos",
-              "description": "Porción de nachos de trigo con salsa a elección.",
-              "price": 12000,
-              "available": true
-            },
-            {
-              "id": "nachos-bravos",
-              "name": "Bravos",
-              "description": "Porción de nachos de trigo, mix de quesos fundidos, guacamole, pico de gallo, mayonesa de sriracha y perejil.",
-              "price": 16000,
-              "available": true
-            },
-            {
-              "id": "nachos-recargados",
-              "name": "Recargados",
-              "description": "Porción de nachos de trigo, mix de quesos fundidos, panceta crocante, guacamole, frijoles, sour cream y verdeo.",
-              "price": 16000,
-              "available": true
-            }
-          ],
-          "addons": [
-            {
-              "id": "nachos-maiz-adicional",
-              "name": "Adicional nachos de maíz",
-              "price": 2000,
-              "available": true
-            }
-          ]
-        },
-        {
-          "id": "tacos",
-          "name": "Tacos",
-          "description": "2 tortillas de maíz rellenas. Con pico de gallo y guacamole.",
-          "items": [
-            {
-              "id": "tacos-birria",
-              "name": "Birria",
-              "description": "Carne de res en cocción lenta con cebolla, pimientos y un consomé de la casa.",
-              "price": 12000,
-              "available": true
-            },
-            {
-              "id": "tacos-pollo",
-              "name": "Pollo",
-              "description": "Pollo desmenuzado, cebolla y pimientos.",
-              "price": 12000,
-              "available": true
-            },
-            {
-              "id": "tacos-veggie",
-              "name": "Veggie",
-              "description": "Salteado de cebolla, pimientos, zanahoria, choclo y frijoles. Opcional queso en hebras.",
-              "price": 10000,
-              "available": true
-            },
-            {
-              "id": "tacos-al-pastor",
-              "name": "Al Pastor",
-              "description": "Cerdo adobado con chile y naranja, cocido a fuego lento en estaca, servido con cebolla morada, ananá y perejil.",
-              "price": 14000,
-              "available": true
-            },
-            {
-              "id": "tacos-langostinos",
-              "name": "Langostinos",
-              "description": "Langostinos salteados con ajo, cebolla, pimientos y reducción de vino blanco.",
-              "price": 18000,
-              "available": true
-            }
-          ]
-        },
-        {
-          "id": "burritos",
-          "name": "Burritos",
-          "description": "Con nachos y dip de guacamole.",
-          "items": [
-            {
-              "id": "burrito-fungi",
-              "name": "Fungi",
-              "description": "Champiñones salteados, arroz, choclo, frijoles, crema agria, queso en hebras y perejil.",
-              "price": 14000,
-              "available": true
-            },
-            {
-              "id": "burrito-pollo",
-              "name": "Pollo",
-              "description": "Pollo desmenuzado, arroz, choclo, frijoles, crema agria, queso en hebras y perejil.",
-              "price": 16000,
-              "available": true
-            },
-            {
-              "id": "burrito-birria",
-              "name": "Birria",
-              "description": "Carne de res en cocción lenta, choclo, arroz, frijoles, crema agria, queso en hebras y perejil.",
-              "price": 16000,
-              "available": true
-            },
-            {
-              "id": "burrito-al-pastor",
-              "name": "Al Pastor",
-              "description": "Cerdo adobado con chile y naranja, choclo, arroz, frijoles, crema agria, queso en hebras y perejil.",
-              "price": 18000,
-              "available": true
-            },
-            {
-              "id": "burrito-langostinos",
-              "name": "Langostinos",
-              "description": "Langostinos salteados con ajo y vino blanco, arroz, choclo, frijoles, crema agria, queso en hebras y perejil.",
-              "price": 22000,
-              "available": true
-            }
-          ]
-        },
-        {
-          "id": "papas-fritas",
-          "name": "Papas Fritas",
-          "items": [
-            {
-              "id": "papas-clasicas",
-              "name": "Clásicas",
-              "description": "Con salsa barbacoa.",
-              "price": 12000,
-              "available": true
-            },
-            {
-              "id": "papas-quates",
-              "name": "Quates",
-              "description": "Queso gratinado, panceta crocante, guacamole, huevo frito y perejil.",
-              "price": 16000,
-              "available": true
-            },
-            {
-              "id": "papas-poblanas",
-              "name": "Poblanas",
-              "description": "Queso cheddar fundido, panceta crocante y verdeo.",
-              "price": 16000,
-              "available": true
-            }
-          ]
-        },
-        {
-          "id": "quesadillas",
-          "name": "Quesadillas",
-          "description": "4 tortillas de trigo rellenas con queso a la plancha y pico de gallo.",
-          "items": [
-            {
-              "id": "quesadilla-birria",
-              "name": "Birria",
-              "description": "Carne de res en cocción lenta con cebolla morada, cebolla morada y perejil.",
-              "price": 14000,
-              "available": true
-            },
-            {
-              "id": "quesadilla-pollo",
-              "name": "Pollo",
-              "description": "Pollo desmenuzado con cebolla y pimientos.",
-              "price": 14000,
-              "available": true
-            },
-            {
-              "id": "quesadilla-veggie",
-              "name": "Veggie",
-              "description": "Salteado de cebolla, pimientos, zanahoria, choclo y frijoles.",
-              "price": 12000,
-              "available": true
-            },
-            {
-              "id": "quesadilla-langostinos",
-              "name": "Langostinos",
-              "description": "Langostinos salteados con ajo, cebolla y pimientos.",
-              "price": 22000,
-              "available": true
-            },
-            {
-              "id": "quesadilla-pastor",
-              "name": "Pastor",
-              "description": "Cerdo adobado con chile y naranja. Con ananá, cebolla morada y perejil.",
-              "price": 16000,
-              "available": true
-            },
-            {
-              "id": "quesadilla-champis",
-              "name": "Champis",
-              "description": "Champiñones salteados en oliva, espinaca y panceta crocante.",
-              "price": 15000,
-              "available": true
-            },
-            {
-              "id": "quesadilla-caprese",
-              "name": "Caprese",
-              "description": "Tomates cherry confitados, pesto y olivas negras.",
-              "price": 15000,
-              "available": true
-            }
-          ]
-        },
-        {
-          "id": "taco-salad",
-          "name": "Taco Salad",
-          "items": [
-            {
-              "id": "taco-salad-tijuana",
-              "name": "Tijuana",
-              "description": "Mix de hojas verdes, láminas de palta, aceitunas negras, tomates cherry, queso en hebras, maíz crocante y reducción de aceto.",
-              "price": 10000,
-              "available": true,
-              "addons": [
-                {
-                  "id": "pollo-desmenuzado",
-                  "name": "Adicional de pollo desmenuzado",
-                  "price": 2500,
-                  "available": true
-                }
-              ]
-            },
-            {
-              "id": "taco-salad-cozumel",
-              "name": "Cozumel",
-              "description": "Mix de hojas verdes, láminas de palta, mango con tajín picante, cebolla morada en pluma, nachos de maíz y sour cream.",
-              "price": 10000,
-              "available": true,
-              "addons": [
-                {
-                  "id": "langostinos-adicional",
-                  "name": "Adicional de langostinos",
-                  "price": 4500,
-                  "available": true
-                }
-              ]
-            },
-            {
-              "id": "taco-salad-jalisco",
-              "name": "Jalisco",
-              "description": "Mix de hojas verdes, láminas de palta, pepino, tomates cherry, nueces confitadas y vinagreta de limón, mostaza y miel.",
-              "price": 10000,
-              "available": true,
-              "addons": [
-                {
-                  "id": "salmon-ahumado-adicional",
-                  "name": "Adicional de salmón ahumado",
-                  "price": 6500,
-                  "available": true
-                }
-              ]
-            }
-          ],
-          "addons": [
-            {
-              "id": "huevo-poche",
-              "name": "Huevo poché adicional",
-              "price": 2000,
-              "available": true
-            }
-          ]
-        },
-        {
-          "id": "agregados",
-          "name": "Agregados",
-          "items": [
-            {
-              "id": "dip-barbacoa",
-              "name": "Dip Barbacoa",
-              "price": 2500,
-              "available": true
-            },
-            {
-              "id": "dip-guacamole",
-              "name": "Dip Guacamole",
-              "price": 2500,
-              "available": true
-            },
-            {
-              "id": "dip-cheddar",
-              "name": "Dip Cheddar",
-              "price": 2500,
-              "available": true
-            },
-            {
-              "id": "dip-sour-cream",
-              "name": "Dip Sour Cream",
-              "price": 2500,
-              "available": true
-            },
-            {
-              "id": "pico-de-gallo",
-              "name": "Pico de Gallo",
-              "price": 1500,
-              "available": true
-            },
-            {
-              "id": "frijoles",
-              "name": "Frijoles",
-              "price": 1500,
-              "available": true
-            }
-          ]
-        },
-        {
-          "id": "postres",
-          "name": "Postres",
-          "items": [
-            {
-              "id": "volcan",
-              "name": "Volcán",
-              "description": "De chocolate con helado de crema americana y frutos rojos.",
-              "price": 10000,
-              "available": true
-            },
-            {
-              "id": "mini-churros",
-              "name": "Mini Churros",
-              "description": "Con bocha de crema americana y dip de pasta de avellanas.",
-              "price": 10000,
-              "available": true
-            },
-            {
-              "id": "cheesecake",
-              "name": "Cheesecake",
-              "description": "Con frutos rojos o maracuyá.",
-              "price": 10000,
-              "available": true
-            }
-          ]
-        },
-        {
-          "id": "bebidas",
-          "name": "Bebidas",
-          "items": []
-        }
-      ]
+  "bars": [
+    {
+      "id": "quates",
+      "name": "Quates",
+      "description": "Cantina Mexicana al Paso",
+      "logo": null,
+      "coverImage": null,
+      "address": null,
+      "phone": null,
+      "instagram": null,
+      "isOpen": true,
+
+      "menu": {
+        "currency": null,
+
+        "categories": [
+          {
+            "id": "nachos",
+            "name": "Nachos",
+            "items": [
+              {
+                "id": "nachos-clasicos",
+                "name": "Clásicos",
+                "description": "Porción de nachos de trigo con salsa a elección.",
+                "price": 12000,
+                "available": true
+              },
+              {
+                "id": "nachos-bravos",
+                "name": "Bravos",
+                "description": "Porción de nachos de trigo, mix de quesos fundidos, guacamole, pico de gallo, mayonesa de sriracha y perejil.",
+                "price": 16000,
+                "available": true
+              },
+              {
+                "id": "nachos-recargados",
+                "name": "Recargados",
+                "description": "Porción de nachos de trigo, mix de quesos fundidos, panceta crocante, guacamole, frijoles, sour cream y verdeo.",
+                "price": 16000,
+                "available": true
+              }
+            ],
+            "addons": [
+              {
+                "id": "nachos-maiz-adicional",
+                "name": "Adicional nachos de maíz",
+                "price": 2000,
+                "available": true
+              }
+            ]
+          },
+
+          {
+            "id": "tacos",
+            "name": "Tacos",
+            "description": "2 tortillas de maíz rellenas. Con pico de gallo y guacamole.",
+            "items": [
+              {
+                "id": "tacos-birria",
+                "name": "Birria",
+                "description": "Carne de res en cocción lenta con cebolla, pimientos y un consomé de la casa.",
+                "price": 12000,
+                "available": true
+              },
+              {
+                "id": "tacos-pollo",
+                "name": "Pollo",
+                "description": "Pollo desmenuzado, cebolla y pimientos.",
+                "price": 12000,
+                "available": true
+              },
+              {
+                "id": "tacos-veggie",
+                "name": "Veggie",
+                "description": "Salteado de cebolla, pimientos, zanahoria, choclo y frijoles. Opcional queso en hebras.",
+                "price": 10000,
+                "available": true
+              },
+              {
+                "id": "tacos-al-pastor",
+                "name": "Al Pastor",
+                "description": "Cerdo adobado con chile y naranja, cocido a fuego lento en estaca, servido con cebolla morada, ananá y perejil.",
+                "price": 14000,
+                "available": true
+              },
+              {
+                "id": "tacos-langostinos",
+                "name": "Langostinos",
+                "description": "Langostinos salteados con ajo, cebolla, pimientos y reducción de vino blanco.",
+                "price": 18000,
+                "available": true
+              }
+            ]
+          },
+
+          {
+            "id": "burritos",
+            "name": "Burritos",
+            "description": "Con nachos y dip de guacamole.",
+            "items": [
+              {
+                "id": "burrito-fungi",
+                "name": "Fungi",
+                "description": "Champiñones salteados, arroz, choclo, frijoles, crema agria, queso en hebras y perejil.",
+                "price": 14000,
+                "available": true
+              },
+              {
+                "id": "burrito-pollo",
+                "name": "Pollo",
+                "description": "Pollo desmenuzado, arroz, choclo, frijoles, crema agria, queso en hebras y perejil.",
+                "price": 16000,
+                "available": true
+              },
+              {
+                "id": "burrito-birria",
+                "name": "Birria",
+                "description": "Carne de res en cocción lenta, choclo, arroz, frijoles, crema agria, queso en hebras y perejil.",
+                "price": 16000,
+                "available": true
+              },
+              {
+                "id": "burrito-al-pastor",
+                "name": "Al Pastor",
+                "description": "Cerdo adobado con chile y naranja, choclo, arroz, frijoles, crema agria, queso en hebras y perejil.",
+                "price": 18000,
+                "available": true
+              },
+              {
+                "id": "burrito-langostinos",
+                "name": "Langostinos",
+                "description": "Langostinos salteados con ajo y vino blanco, arroz, choclo, frijoles, crema agria, queso en hebras y perejil.",
+                "price": 22000,
+                "available": true
+              }
+            ]
+          },
+
+          {
+            "id": "papas-fritas",
+            "name": "Papas Fritas",
+            "items": [
+              {
+                "id": "papas-clasicas",
+                "name": "Clásicas",
+                "description": "Con salsa barbacoa.",
+                "price": 12000,
+                "available": true
+              },
+              {
+                "id": "papas-quates",
+                "name": "Quates",
+                "description": "Queso gratinado, panceta crocante, guacamole, huevo frito y perejil.",
+                "price": 16000,
+                "available": true
+              },
+              {
+                "id": "papas-poblanas",
+                "name": "Poblanas",
+                "description": "Queso cheddar fundido, panceta crocante y verdeo.",
+                "price": 16000,
+                "available": true
+              }
+            ]
+          },
+
+          {
+            "id": "quesadillas",
+            "name": "Quesadillas",
+            "description": "4 tortillas de trigo rellenas con queso a la plancha y pico de gallo.",
+            "items": [
+              {
+                "id": "quesadilla-birria",
+                "name": "Birria",
+                "description": "Carne de res en cocción lenta con cebolla morada y perejil.",
+                "price": 14000,
+                "available": true
+              },
+              {
+                "id": "quesadilla-pollo",
+                "name": "Pollo",
+                "description": "Pollo desmenuzado con cebolla y pimientos.",
+                "price": 14000,
+                "available": true
+              },
+              {
+                "id": "quesadilla-veggie",
+                "name": "Veggie",
+                "description": "Salteado de cebolla, pimientos, zanahoria, choclo y frijoles.",
+                "price": 12000,
+                "available": true
+              },
+              {
+                "id": "quesadilla-langostinos",
+                "name": "Langostinos",
+                "description": "Langostinos salteados con ajo, cebolla y pimientos.",
+                "price": 22000,
+                "available": true
+              },
+              {
+                "id": "quesadilla-pastor",
+                "name": "Pastor",
+                "description": "Cerdo adobado con chile y naranja. Con ananá, cebolla morada y perejil.",
+                "price": 16000,
+                "available": true
+              },
+              {
+                "id": "quesadilla-champis",
+                "name": "Champis",
+                "description": "Champiñones salteados en oliva, espinaca y panceta crocante.",
+                "price": 15000,
+                "available": true
+              },
+              {
+                "id": "quesadilla-caprese",
+                "name": "Caprese",
+                "description": "Tomates cherry confitados, pesto y olivas negras.",
+                "price": 15000,
+                "available": true
+              }
+            ]
+          },
+
+          {
+            "id": "taco-salad",
+            "name": "Taco Salad",
+            "items": [
+              {
+                "id": "taco-salad-tijuana",
+                "name": "Tijuana",
+                "description": "Mix de hojas verdes, láminas de palta, aceitunas negras, tomates cherry, queso en hebras, maíz crocante y reducción de aceto.",
+                "price": 10000,
+                "available": true,
+                "addons": [
+                  {
+                    "id": "pollo-desmenuzado",
+                    "name": "Adicional de pollo desmenuzado",
+                    "price": 2500,
+                    "available": true
+                  }
+                ]
+              },
+              {
+                "id": "taco-salad-cozumel",
+                "name": "Cozumel",
+                "description": "Mix de hojas verdes, láminas de palta, mango con tajín picante, cebolla morada en pluma, nachos de maíz y sour cream.",
+                "price": 10000,
+                "available": true,
+                "addons": [
+                  {
+                    "id": "langostinos-adicional",
+                    "name": "Adicional de langostinos",
+                    "price": 4500,
+                    "available": true
+                  }
+                ]
+              },
+              {
+                "id": "taco-salad-jalisco",
+                "name": "Jalisco",
+                "description": "Mix de hojas verdes, láminas de palta, pepino, tomates cherry, nueces confitadas y vinagreta de limón, mostaza y miel.",
+                "price": 10000,
+                "available": true,
+                "addons": [
+                  {
+                    "id": "salmon-ahumado-adicional",
+                    "name": "Adicional de salmón ahumado",
+                    "price": 6500,
+                    "available": true
+                  }
+                ]
+              }
+            ],
+            "addons": [
+              {
+                "id": "huevo-poche",
+                "name": "Huevo poché adicional",
+                "price": 2000,
+                "available": true
+              }
+            ]
+          },
+
+          {
+            "id": "agregados",
+            "name": "Agregados",
+            "items": [
+              {
+                "id": "dip-barbacoa",
+                "name": "Dip Barbacoa",
+                "price": 2500,
+                "available": true
+              },
+              {
+                "id": "dip-guacamole",
+                "name": "Dip Guacamole",
+                "price": 2500,
+                "available": true
+              },
+              {
+                "id": "dip-cheddar",
+                "name": "Dip Cheddar",
+                "price": 2500,
+                "available": true
+              },
+              {
+                "id": "dip-sour-cream",
+                "name": "Dip Sour Cream",
+                "price": 2500,
+                "available": true
+              },
+              {
+                "id": "pico-de-gallo",
+                "name": "Pico de Gallo",
+                "price": 1500,
+                "available": true
+              },
+              {
+                "id": "frijoles",
+                "name": "Frijoles",
+                "price": 1500,
+                "available": true
+              }
+            ]
+          },
+
+          {
+            "id": "postres",
+            "name": "Postres",
+            "items": [
+              {
+                "id": "volcan",
+                "name": "Volcán",
+                "description": "De chocolate con helado de crema americana y frutos rojos.",
+                "price": 10000,
+                "available": true
+              },
+              {
+                "id": "mini-churros",
+                "name": "Mini Churros",
+                "description": "Con bocha de crema americana y dip de pasta de avellanas.",
+                "price": 10000,
+                "available": true
+              },
+              {
+                "id": "cheesecake",
+                "name": "Cheesecake",
+                "description": "Con frutos rojos o maracuyá.",
+                "price": 10000,
+                "available": true
+              }
+            ]
+          },
+
+          {
+            "id": "bebidas",
+            "name": "Bebidas",
+            "items": []
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "pinta-tacos",
+      "name": "pinta Tacos",
+      "description": null,
+      "logo": null,
+      "coverImage": null,
+      "address": null,
+      "phone": null,
+      "instagram": null,
+      "isOpen": false,
+
+      "menu": {
+        "currency": null,
+        "categories": []
+      }
+    },
+
+    {
+      "id": "el-bajon-del-yaggi",
+      "name": "El Bajón del Yaggi",
+      "description": null,
+      "logo": null,
+      "coverImage": null,
+      "address": null,
+      "phone": null,
+      "instagram": null,
+      "isOpen": false,
+
+      "menu": {
+        "currency": null,
+        "categories": []
+      }
+    },
+
+    {
+      "id": "boris",
+      "name": "Boris",
+      "description": null,
+      "logo": null,
+      "coverImage": null,
+      "address": null,
+      "phone": null,
+      "instagram": null,
+      "isOpen": false,
+
+      "menu": {
+        "currency": null,
+        "categories": []
+      }
     }
-  }
+  ]
 }
