@@ -134,7 +134,7 @@
                   "id": "mila-chingona",
                   "name": "Mila Chingona para 2 personas",
                   "description": "Queso, jamón, huevo, cebollas y papas.",
-                  "price": 12000,
+                  "price": 20000,
                   "currency": "ARS",
                   "available": true
                 }
@@ -260,7 +260,7 @@
                 {
                   "id": "pizza-comun",
                   "name": "Común",
-                  "price": 10500,
+                  "price": 10000,
                   "currency": "ARS",
                   "available": true
                 },
@@ -657,7 +657,7 @@
                     {
                       "id": "stella-1lt",
                       "name": "1lt.",
-                      "price": 9500,
+                      "price": 10000,
                       "currency": "ARS"
                     }
                   ],
@@ -789,7 +789,7 @@
                 {
                   "id": "whisky",
                   "name": "Whisky",
-                  "price": 5000,
+                  "price": 6000,
                   "currency": "ARS",
                   "available": true
                 },
