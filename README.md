@@ -118,3 +118,5 @@ The application uses the following core entities:
 ## License
 
 Private — All rights reserved.
+stimated time: 7h
+since: 1 Sept 2026
